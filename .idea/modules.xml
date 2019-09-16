@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/idealTestProject.iml" filepath="$PROJECT_DIR$/idealTestProject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ideal-euraka-1001/idealeuraka1001.iml" filepath="$PROJECT_DIR$/ideal-euraka-1001/idealeuraka1001.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ideal-gateway-1002/idealgateway1002.iml" filepath="$PROJECT_DIR$/ideal-gateway-1002/idealgateway1002.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ideal-rabbitmq-1010/idealrabbitmq1010.iml" filepath="$PROJECT_DIR$/ideal-rabbitmq-1010/idealrabbitmq1010.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,31 @@
+server:
+  port: 1001
+
+spring:
+  application:
+    name: IDEAL-EURAKA
+#  security:
+#    user:
+#      name: admin
+#      password: 123456
+  main:
+    allow-bean-definition-overriding: true
+
+
+eureka:
+  client:
+    #   单节点该项设为false， 代表不向服务中心注册自己
+    register-with-eureka: false
+    #   单服务注册中心的职责是维护服务实例，他不需要检索服务，所以也为false
+    fetch-registry: false
+    service-url:
+      #     这一行配置主要起到的作用是将当前的eureka注册到另一个eureka上去。
+      defaultZone: http://localhost:${server.port}/eureka/
+    #   Eureka健康检查
+    healthcheck:
+      enabled: true
+  instance:
+    hostname: localhost
+  server:
+    #   关闭自我保护
+    enable-self-preservation: false
