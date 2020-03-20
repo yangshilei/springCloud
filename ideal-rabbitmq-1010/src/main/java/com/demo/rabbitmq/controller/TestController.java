@@ -28,7 +28,7 @@ public class TestController {
   @ApiOperation(value = "rabbitMQ测试接口", notes = "rabbitMQ测试接口")
   @PostMapping(value = "/ideal/rabbitmq/test" , consumes = MediaType.APPLICATION_JSON_UTF8_VALUE)
   String test(@RequestParam("name") String name){
-    log.debug("进入rabbitMQ测试接口！");
+    log.info("进入rabbitMQ测试接口！");
     return "hello world" + name;
   }
 }
