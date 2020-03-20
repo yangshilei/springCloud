@@ -131,15 +131,15 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="253" />
-          <entry key="txt" value="24" />
+          <entry key="java" value="272" />
+          <entry key="txt" value="30" />
           <entry key="xml" value="21" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="253" />
-          <entry key="PLAIN_TEXT" value="24" />
+          <entry key="JAVA" value="272" />
+          <entry key="PLAIN_TEXT" value="30" />
           <entry key="XML" value="21" />
         </counts>
       </usages-collector>
@@ -161,8 +161,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/ideal-rabbitmq-1010/src/main/java/com/demo/rabbitmq/util/ConnectionUtil.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="176">
-                  <caret line="8" column="16" selection-start-line="8" selection-end-line="9" />
+                <state relative-caret-position="110">
+                  <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -174,11 +174,11 @@
       </split-first>
       <split-second>
         <leaf>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/ideal-rabbitmq-1010/src/main/java/com/demo/rabbitmq/rabbitmq/Send.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="285">
-                  <caret line="15" column="6" lean-forward="true" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+                <state relative-caret-position="171">
+                  <caret line="9" column="46" lean-forward="true" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -186,11 +186,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/ideal-rabbitmq-1010/src/main/java/com/demo/rabbitmq/rabbitmq/Customer.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="238">
-                  <caret line="14" column="39" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
+                <state relative-caret-position="209">
+                  <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -244,9 +244,9 @@
         <option value="$PROJECT_DIR$/ideal-rabbitmq-1010/src/main/java/com/demo/rabbitmq/rocketmq/Producer.java" />
         <option value="$PROJECT_DIR$/ideal-rabbitmq-1010/src/main/java/com/demo/rabbitmq/test/NewTask.java" />
         <option value="$PROJECT_DIR$/ideal-rabbitmq-1010/pom.xml" />
-        <option value="$PROJECT_DIR$/ideal-rabbitmq-1010/src/main/java/com/demo/rabbitmq/rabbitmq/Customer.java" />
         <option value="$PROJECT_DIR$/ideal-rabbitmq-1010/src/main/java/com/demo/rabbitmq/util/ConnectionUtil.java" />
         <option value="$PROJECT_DIR$/ideal-rabbitmq-1010/src/main/java/com/demo/rabbitmq/rabbitmq/Send.java" />
+        <option value="$PROJECT_DIR$/ideal-rabbitmq-1010/src/main/java/com/demo/rabbitmq/rabbitmq/Customer.java" />
       </list>
     </option>
   </component>
@@ -379,7 +379,7 @@
     <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1584699962681" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1584700285468" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -426,12 +426,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Consumer1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.demo.rabbitmq.rocketmq.Consumer1" />
+    <configuration name="Customer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.demo.rabbitmq.rabbitmq.Customer" />
       <module name="idealrabbitmq1010" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.demo.rabbitmq.rocketmq.*" />
+          <option name="PATTERN" value="com.demo.rabbitmq.rabbitmq.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -490,16 +490,16 @@
       <item itemvalue="Spring Boot.RabbitMqApplication" />
       <item itemvalue="Application.Consumer" />
       <item itemvalue="Application.Producer" />
-      <item itemvalue="Application.Consumer1" />
       <item itemvalue="Application.Send" />
+      <item itemvalue="Application.Customer" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Send" />
+        <item itemvalue="Application.Customer" />
         <item itemvalue="Application.Producer" />
         <item itemvalue="Spring Boot.RabbitMqApplication" />
         <item itemvalue="Application.Consumer" />
-        <item itemvalue="Application.Consumer1" />
       </list>
     </recent_temporary>
   </component>
@@ -547,7 +547,7 @@
       <workItem from="1568614785612" duration="6000" />
       <workItem from="1568615689724" duration="39000" />
       <workItem from="1568616281075" duration="101000" />
-      <workItem from="1584693381006" duration="6485000" />
+      <workItem from="1584693381006" duration="6869000" />
     </task>
     <task id="LOCAL-00001" summary="工作基本文件">
       <created>1568616354446</created>
@@ -570,11 +570,18 @@
       <option name="project" value="LOCAL" />
       <updated>1584699619699</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="rabbitMQ测试完成">
+      <created>1584699984031</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1584699984031</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45761000" />
+    <option name="totallyTimeSpent" value="46145000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -673,7 +680,8 @@
     <MESSAGE value="工作基本文件" />
     <MESSAGE value="接口日志等级修改" />
     <MESSAGE value="rabbitMQ测试" />
-    <option name="LAST_COMMIT_MESSAGE" value="rabbitMQ测试" />
+    <MESSAGE value="rabbitMQ测试完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="rabbitMQ测试完成" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -847,20 +855,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ideal-rabbitmq-1010/src/main/java/com/demo/rabbitmq/rabbitmq/Customer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="39" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ideal-rabbitmq-1010/src/main/java/com/demo/rabbitmq/util/ConnectionUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="16" selection-start-line="8" selection-end-line="9" />
+        <state relative-caret-position="110">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -869,8 +867,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ideal-rabbitmq-1010/src/main/java/com/demo/rabbitmq/rabbitmq/Send.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="6" lean-forward="true" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+        <state relative-caret-position="171">
+          <caret line="9" column="46" lean-forward="true" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ideal-rabbitmq-1010/src/main/java/com/demo/rabbitmq/rabbitmq/Customer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
