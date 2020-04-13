@@ -100,11 +100,15 @@ public class SchedulerJobServiceImpl implements SchedulerJobService {
      */
     @Override
     public Result saveOrUpdate(ScheduleJob scheduleJob) throws Exception {
+        log.info("进入新增或更新定时任务实现方法");
         TriggerKey triggerKey = TriggerKey.triggerKey(scheduleJob.getJobName(), scheduleJob.getJobGroup());
+        log.info("获取trigger信息===={}",triggerKey);
         CronTrigger cronTrigger = (CronTrigger) scheduler.getTrigger(triggerKey);
         if (cronTrigger == null) {
+            log.info("开始新增定时任务");
             return addJob(scheduleJob);
         } else {
+            log.info("开始更新定时任务");
             return updateJobCronSchedule(scheduleJob);
         }
     }
@@ -179,19 +183,25 @@ public class SchedulerJobServiceImpl implements SchedulerJobService {
      * @param scheduleJob 任务
      */
     private Result addJob(ScheduleJob scheduleJob) {
+        log.info("进入具体新增方法==={}",scheduleJob.toString());
         Result result = new Result(false, CommConstants.RESULT_CODE.ERROR);
         if (StringUtils.isEmpty(scheduleJob.getCronExpression())) {
             result.setMessage("CronExpression不能为空");
             return result;
         }
+
         JobDetail jobDetail = JobBuilder.newJob(ScheduleTask.class)
                 .withIdentity(scheduleJob.getJobName(), scheduleJob.getJobGroup()).build();
+        log.info("创建jobdetail==={}",jobDetail.toString());
         jobDetail.getJobDataMap().put("scheduleJob", scheduleJob);
         CronScheduleBuilder cronScheduleBuilder = CronScheduleBuilder
                 .cronSchedule(scheduleJob.getCronExpression());
+        log.info("继续一下步==={}",cronScheduleBuilder.toString());
         CronTrigger trigger = TriggerBuilder.newTrigger().withDescription(scheduleJob.getDescription())
                 .withIdentity(scheduleJob.getJobName(), scheduleJob.getJobGroup())
                 .withSchedule(cronScheduleBuilder.withMisfireHandlingInstructionDoNothing()).build();
+
+        log.info("继续往下执行==={}",trigger.toString());
 
         // repeat test
         //SimpleScheduleBuilder simpleScheduleBuilder  = SimpleScheduleBuilder.simpleSchedule().withIntervalInSeconds(5).repeatForever();
@@ -199,6 +209,7 @@ public class SchedulerJobServiceImpl implements SchedulerJobService {
                 .withIdentity(scheduleJob.getJobName(), scheduleJob.getJobGroup())
                 .withSchedule(SimpleScheduleBuilder.repeatSecondlyForTotalCount(5, 5)).build();*/
         try {
+            log.info("开始添加定时任务");
             scheduler.scheduleJob(jobDetail, trigger);
             result.setResult(true);
             result.setMessage("添加定时任务成功");
