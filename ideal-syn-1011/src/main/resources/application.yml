@@ -1,9 +1,26 @@
 server:
   port: 1011
+  compression:
+    enabled: true
+    mime-types: [application/json,text/plain]
+    min-response-size: 500
 
 spring:
+  main:
+    # 允许bean定义重写
+    allow-bean-definition-overriding: true
   application:
     name: IDEAL-SYN
+  datasource:
+    url: jdbc:mysql://localhost:3306/learn?useUnicode=true&characterEncoding=utf-8&useAffectedRows=true&allowMultiQueries=true&useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: ysl13222031857
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      minimum-idle: 1
+      maximum-pool-size: 50
+      idle-timeout: 180000
 
 eureka:
   client:
@@ -12,3 +29,12 @@ eureka:
     # 是否注册自身到eureka服务器
     register-with-eureka: true
     fetch-registry: true
+
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+
+logging:
+  config: classpath:logback-spring-dev.xml
