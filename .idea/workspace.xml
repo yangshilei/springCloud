@@ -2,13 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2273be99-b15d-4519-82c8-f64ef2813dc3" name="Default Changelist" comment="rabbitMQ消费案例完成">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_9_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_9_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_9_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_dataformat_jackson_dataformat_xml_2_9_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_9_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_9_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_jaxb_annotations_2_9_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_9_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_5_0_7_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ideal-euraka-1001/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ideal-euraka-1001/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ideal-euraka-1001/target/classes/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ideal-euraka-1001/target/classes/com/demo/euraka/EurakaApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ideal-gateway-1002/target/classes/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ideal-rabbitmq-1010/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ideal-rabbitmq-1010/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ideal-rabbitmq-1010/src/main/java/com/demo/rabbitmq/rabbitmq/Send.java" beforeDir="false" afterPath="$PROJECT_DIR$/ideal-rabbitmq-1010/src/main/java/com/demo/rabbitmq/rabbitmq/Send.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ideal-rabbitmq-1010/src/main/java/com/demo/rabbitmq/util/ConnectionUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/ideal-rabbitmq-1010/src/main/java/com/demo/rabbitmq/util/ConnectionUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ideal-rabbitmq-1010/target/classes/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.txt" beforeDir="false" afterPath="$PROJECT_DIR$/readme.txt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/ideal-euraka-1001/target/" />
     <ignored path="$PROJECT_DIR$/ideal-gateway-1002/target/" />
     <ignored path="$PROJECT_DIR$/ideal-rabbitmq-1010/target/" />
+    <ignored path="$PROJECT_DIR$/ideal-syn-1011/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,37 +135,43 @@
           <entry key="project.closed" value="2" />
           <entry key="project.open.time.45" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="4" />
-          <entry key="java" value="7" />
-          <entry key="xml" value="5" />
-          <entry key="yml" value="2" />
+          <entry key="java" value="29" />
+          <entry key="pom" value="1" />
+          <entry key="properties" value="1" />
+          <entry key="xml" value="19" />
+          <entry key="yml" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="4" />
-          <entry key="JAVA" value="7" />
-          <entry key="XML" value="5" />
-          <entry key="YAML" value="2" />
+          <entry key="JAVA" value="29" />
+          <entry key="Properties" value="1" />
+          <entry key="XML" value="20" />
+          <entry key="YAML" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="272" />
-          <entry key="txt" value="41" />
-          <entry key="xml" value="21" />
+          <entry key="java" value="383" />
+          <entry key="txt" value="83" />
+          <entry key="xml" value="65" />
+          <entry key="yml" value="46" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="272" />
-          <entry key="PLAIN_TEXT" value="41" />
-          <entry key="XML" value="21" />
+          <entry key="JAVA" value="383" />
+          <entry key="PLAIN_TEXT" value="83" />
+          <entry key="XML" value="65" />
+          <entry key="YAML" value="46" />
         </counts>
       </usages-collector>
     </session>
@@ -154,17 +183,29 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/readme.txt">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="198">
-                  <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+                <state relative-caret-position="3256">
+                  <caret line="148" column="31" lean-forward="true" selection-start-line="148" selection-start-column="31" selection-end-line="148" selection-end-column="31" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/ideal-syn-1011/src/main/java/com/demo/syn/controller/JobController.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-639">
+                  <caret line="28" column="14" lean-forward="true" selection-start-line="28" selection-start-column="14" selection-end-line="28" selection-end-column="14" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/ideal-rabbitmq-1010/src/main/java/com/demo/rabbitmq/util/ConnectionUtil.java">
+            <entry file="file://$PROJECT_DIR$/ideal-syn-1011/src/main/java/com/demo/syn/config/ScheduleTask.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="374">
-                  <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+                <state relative-caret-position="440">
+                  <caret line="22" column="14" lean-forward="true" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -176,26 +217,11 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/ideal-rabbitmq-1010/src/main/java/com/demo/rabbitmq/rabbitmq/Send.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="154">
-                  <caret line="9" column="46" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/ideal-rabbitmq-1010/src/main/java/com/demo/rabbitmq/rabbitmq/Customer.java">
+            <entry file="file://$PROJECT_DIR$/ideal-syn-1011/pom.xml">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="462">
-                  <caret line="24" column="33" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
+                <state relative-caret-position="331">
+                  <caret line="44" column="24" selection-start-line="44" selection-start-column="24" selection-end-line="44" selection-end-column="24" />
                 </state>
               </provider>
             </entry>
@@ -219,6 +245,7 @@
       <find>rpcHook</find>
       <find>RabbitAuto</find>
       <find>com.rabbitmq</find>
+      <find>swagger</find>
     </findStrings>
     <dirStrings>
       <dir>D:\programs\各种软件缓存\IdeaWorkspace\idealTestProject</dir>
@@ -233,22 +260,40 @@
         <option value="$PROJECT_DIR$/ideal-euraka-1001/src/main/java/com/demo/euraka/Test.java" />
         <option value="$PROJECT_DIR$/ideal-euraka-1001/src/main/java/com/demo/euraka/EurakaApplication.java" />
         <option value="$PROJECT_DIR$/ideal-rabbitmq-1010/src/main/java/com/demo/rabbitmq.java" />
-        <option value="$PROJECT_DIR$/ideal-euraka-1001/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/ideal-rabbitmq-1010/src/main/java/com/demo/rabbitmq/config/SwaggerConfig.java" />
         <option value="$PROJECT_DIR$/ideal-rabbitmq-1010/src/main/java/com/demo/rabbitmq/rocketmq/Consumer.java" />
         <option value="$PROJECT_DIR$/ideal-rabbitmq-1010/src/main/java/com/demo/rabbitmq/rocketmq/Consumer1.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/ideal-euraka-1001/pom.xml" />
-        <option value="$PROJECT_DIR$/readme.txt" />
         <option value="$PROJECT_DIR$/ideal-rabbitmq-1010/src/main/java/com/demo/rabbitmq/RabbitMqApplication.java" />
         <option value="$PROJECT_DIR$/ideal-rabbitmq-1010/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/ideal-rabbitmq-1010/src/main/java/com/demo/rabbitmq/controller/TestController.java" />
         <option value="$PROJECT_DIR$/ideal-rabbitmq-1010/src/main/java/com/demo/rabbitmq/rocketmq/Producer.java" />
         <option value="$PROJECT_DIR$/ideal-rabbitmq-1010/src/main/java/com/demo/rabbitmq/test/NewTask.java" />
-        <option value="$PROJECT_DIR$/ideal-rabbitmq-1010/pom.xml" />
-        <option value="$PROJECT_DIR$/ideal-rabbitmq-1010/src/main/java/com/demo/rabbitmq/util/ConnectionUtil.java" />
-        <option value="$PROJECT_DIR$/ideal-rabbitmq-1010/src/main/java/com/demo/rabbitmq/rabbitmq/Send.java" />
         <option value="$PROJECT_DIR$/ideal-rabbitmq-1010/src/main/java/com/demo/rabbitmq/rabbitmq/Customer.java" />
+        <option value="$PROJECT_DIR$/ideal-euraka-1001/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/ideal-syn-1011/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/ideal-rabbitmq-1010/src/main/java/com/demo/rabbitmq/rabbitmq/Send.java" />
+        <option value="$PROJECT_DIR$/ideal-rabbitmq-1010/src/main/java/com/demo/rabbitmq/util/ConnectionUtil.java" />
+        <option value="$PROJECT_DIR$/ideal-syn-1011/src/main/java/com/demo/syn/config/SwaggerConfig.java" />
+        <option value="$PROJECT_DIR$/ideal-rabbitmq-1010/pom.xml" />
+        <option value="$PROJECT_DIR$/ideal-syn-1011/src/main/java/com/demo/syn/SynApplication.java" />
+        <option value="$PROJECT_DIR$/ideal-syn-1011/src/main/java/com/demo/syn/config/QuartzConfiguration.java" />
+        <option value="$PROJECT_DIR$/ideal-syn-1011/src/main/java/com/demo/syn/service/QuartzService.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/ideal-syn-1011/pom.xml" />
+        <option value="$PROJECT_DIR$/ideal-syn-1011/src/main/java/com/demo/syn/dto/ScheduleJob.java" />
+        <option value="$PROJECT_DIR$/ideal-syn-1011/src/main/java/com/demo/syn/service/SchedulerJobService.java" />
+        <option value="$PROJECT_DIR$/ideal-syn-1011/src/main/java/com/demo/syn/util/ApplicationContextUtil.java" />
+        <option value="$PROJECT_DIR$/ideal-syn-1011/src/main/java/com/demo/syn/util/DateUtil.java" />
+        <option value="$PROJECT_DIR$/ideal-syn-1011/src/main/java/com/demo/syn/service/impl/QuartzServiceImpl.java" />
+        <option value="$PROJECT_DIR$/ideal-syn-1011/src/main/java/com/demo/syn/constants/CommConstants.java" />
+        <option value="$PROJECT_DIR$/ideal-syn-1011/src/main/java/com/demo/syn/constants/ResponseEnum.java" />
+        <option value="$PROJECT_DIR$/ideal-syn-1011/src/main/java/com/demo/syn/dto/Result.java" />
+        <option value="$PROJECT_DIR$/ideal-syn-1011/src/main/java/com/demo/syn/controller/JobController.java" />
+        <option value="$PROJECT_DIR$/ideal-syn-1011/src/main/java/com/demo/syn/service/impl/SchedulerJobServiceImpl.java" />
+        <option value="$PROJECT_DIR$/ideal-syn-1011/src/main/java/com/demo/syn/jobs/HelloJob.java" />
+        <option value="$PROJECT_DIR$/readme.txt" />
+        <option value="$PROJECT_DIR$/ideal-syn-1011/src/main/java/com/demo/syn/config/ScheduleTask.java" />
       </list>
     </option>
   </component>
@@ -303,7 +348,84 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes />
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springCloud" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springCloud" type="462c0819:PsiDirectoryNode" />
+              <item name="ideal-syn-1011" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springCloud" type="462c0819:PsiDirectoryNode" />
+              <item name="ideal-syn-1011" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springCloud" type="462c0819:PsiDirectoryNode" />
+              <item name="ideal-syn-1011" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springCloud" type="462c0819:PsiDirectoryNode" />
+              <item name="ideal-syn-1011" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springCloud" type="462c0819:PsiDirectoryNode" />
+              <item name="ideal-syn-1011" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="syn" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springCloud" type="462c0819:PsiDirectoryNode" />
+              <item name="ideal-syn-1011" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="syn" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springCloud" type="462c0819:PsiDirectoryNode" />
+              <item name="ideal-syn-1011" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="syn" type="462c0819:PsiDirectoryNode" />
+              <item name="jobs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springCloud" type="462c0819:PsiDirectoryNode" />
+              <item name="ideal-syn-1011" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="RequestMappingsPanelOrder0" value="0" />
@@ -314,7 +436,7 @@
     <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1584700552655" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1586772214446" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -325,7 +447,15 @@
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.demo.syn.jobs" />
+      <recent name="com.demo.syn.constants" />
+      <recent name="com.demo.syn.util" />
+      <recent name="com.demo.syn.dto" />
+      <recent name="com.demo.syn.service.impl" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\学习\springCloud\ideal-syn-1011\src\main\resources" />
       <recent name="D:\programs\各种软件缓存\IdeaWorkspace\idealTestProject\ideal-euraka-1001\src\main\resources" />
     </key>
   </component>
@@ -345,9 +475,9 @@
         </RuleState>
       </list>
     </option>
-    <option name="contentProportion" value="0.18885282" />
+    <option name="contentProportion" value="0.1482684" />
   </component>
-  <component name="RunManager" selected="Application.Send">
+  <component name="RunManager" selected="Spring Boot.SynApplication">
     <configuration name="Consumer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.demo.rabbitmq.rocketmq.Consumer" />
       <module name="idealrabbitmq1010" />
@@ -420,20 +550,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SynApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="idealsyn1011" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.demo.syn.SynApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
+      <item itemvalue="Spring Boot.SynApplication" />
       <item itemvalue="Spring Boot.EurakaApplication" />
-      <item itemvalue="Spring Boot.RabbitMqApplication" />
       <item itemvalue="Application.Consumer" />
       <item itemvalue="Application.Producer" />
       <item itemvalue="Application.Send" />
       <item itemvalue="Application.Customer" />
+      <item itemvalue="Spring Boot.RabbitMqApplication" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.RabbitMqApplication" />
         <item itemvalue="Application.Send" />
         <item itemvalue="Application.Customer" />
         <item itemvalue="Application.Producer" />
-        <item itemvalue="Spring Boot.RabbitMqApplication" />
         <item itemvalue="Application.Consumer" />
       </list>
     </recent_temporary>
@@ -484,6 +623,7 @@
       <workItem from="1568616281075" duration="101000" />
       <workItem from="1584693381006" duration="7151000" />
       <workItem from="1584925955654" duration="158000" />
+      <workItem from="1586767275479" duration="4805000" />
     </task>
     <task id="LOCAL-00001" summary="工作基本文件">
       <created>1568616354446</created>
@@ -520,11 +660,18 @@
       <option name="project" value="LOCAL" />
       <updated>1584700302886</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="rabbitMQ消费案例完成">
+      <created>1586767459615</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1586767459616</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46585000" />
+    <option name="totallyTimeSpent" value="51390000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -544,12 +691,12 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="Capture Tool" order="3" />
       <window_info id="Web" order="4" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="5" weight="0.2531983" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.18017058" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="7" />
       <window_info anchor="bottom" id="MyBatis Sql Log" order="0" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="2" />
+      <window_info anchor="bottom" id="Terminal" order="2" weight="0.32899022" />
       <window_info anchor="bottom" id="Messages" order="3" weight="0.32502708" />
       <window_info anchor="bottom" id="Java Enterprise" order="4" />
       <window_info anchor="bottom" id="Database Changes" order="5" show_stripe_button="false" />
@@ -575,43 +722,6 @@
       <window_info anchor="right" id="Ant Build" order="8" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="9" weight="0.25" />
     </layout>
-    <layout-to-restore>
-      <window_info id="Image Layers" order="0" />
-      <window_info id="UI Designer" order="1" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info id="Capture Tool" order="3" />
-      <window_info id="Web" order="4" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.2531983" />
-      <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="7" />
-      <window_info anchor="bottom" id="MyBatis Log" order="0" />
-      <window_info anchor="bottom" id="MyBatis Sql Log" order="1" />
-      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="3" />
-      <window_info anchor="bottom" id="Messages" order="4" weight="0.32502708" />
-      <window_info anchor="bottom" id="Java Enterprise" order="5" />
-      <window_info anchor="bottom" id="Database Changes" order="6" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Message" order="8" />
-      <window_info anchor="bottom" id="Spring" order="9" />
-      <window_info anchor="bottom" id="Find" order="10" />
-      <window_info anchor="bottom" id="Debug" order="11" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="12" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="13" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="14" weight="0.32936078" />
-      <window_info anchor="bottom" id="Run Dashboard" order="15" weight="0.3843648" />
-      <window_info anchor="bottom" id="Run" order="16" visible="true" weight="0.3583062" />
-      <window_info anchor="right" id="Capture Analysis" order="0" />
-      <window_info anchor="right" id="Maven Projects" order="1" weight="0.32995737" />
-      <window_info anchor="right" id="Database" order="2" />
-      <window_info anchor="right" id="Palette&#9;" order="3" />
-      <window_info anchor="right" id="Theme Preview" order="4" />
-      <window_info anchor="right" id="Bean Validation" order="5" />
-      <window_info anchor="right" id="Palette" order="6" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="7" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="8" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="9" weight="0.25" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -627,40 +737,7 @@
     <MESSAGE value="rabbitMQ消费案例完成" />
     <option name="LAST_COMMIT_MESSAGE" value="rabbitMQ消费案例完成" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/ideal-rabbitmq-1010/src/main/java/com/demo/rabbitmq/rabbitmq/Send.java</url>
-          <line>36</line>
-          <properties />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ideal-gateway-1002/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ideal-gateway-1002/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/idealTestProject.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ideal-rabbitmq-1010/src/main/java/com/demo/rabbitmq.java" />
-    <entry file="file://$MAVEN_REPOSITORY$/org/apache/rocketmq/rocketmq-client/4.2.0/rocketmq-client-4.2.0.pom" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/rocketmq/rocketmq-client/4.2.0/rocketmq-client-4.2.0.jar!/org/apache/rocketmq/client/consumer/listener/ConsumeConcurrentlyStatus.class" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/rocketmq/rocketmq-client/4.2.0/rocketmq-client-4.2.0.jar!/org/apache/rocketmq/client/consumer/MQPushConsumer.class" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/rocketmq/rocketmq-client/4.2.0/rocketmq-client-4.2.0.jar!/org/apache/rocketmq/client/impl/consumer/DefaultMQPushConsumerImpl.class" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/rocketmq/rocketmq-client/4.2.0/rocketmq-client-4.2.0.jar!/org/apache/rocketmq/client/consumer/DefaultMQPushConsumer.class" />
-    <entry file="jar://$USER_HOME$/.ideaLibSources/rocketmq-client-4.2.0-sources.jar!/org/apache/rocketmq/client/consumer/MQPushConsumer.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/rocketmq/rocketmq-common/4.2.0/rocketmq-common-4.2.0.jar!/org/apache/rocketmq/common/protocol/body/QueueTimeSpan.class" />
     <entry file="jar://$USER_HOME$/.ideaLibSources/rocketmq-client-4.2.0-sources.jar!/org/apache/rocketmq/client/impl/consumer/DefaultMQPushConsumerImpl.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/rocketmq/rocketmq-remoting/4.2.0/rocketmq-remoting-4.2.0.jar!/org/apache/rocketmq/remoting/RPCHook.class" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/rocketmq/rocketmq-common/4.2.0/rocketmq-common-4.2.0.jar!/org/apache/rocketmq/common/MixAll.class" />
@@ -681,13 +758,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ideal-rabbitmq-1010/src/main/java/com/demo/rabbitmq/RabbitMqApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="13" column="3" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/2.0.3.RELEASE/spring-boot-autoconfigure-2.0.3.RELEASE.jar!/org/springframework/boot/autoconfigure/amqp/RabbitProperties.class" />
     <entry file="jar://$MAVEN_REPOSITORY$/com/alibaba/rocketmq/rocketmq-client/3.2.6/rocketmq-client-3.2.6.jar!/com/alibaba/rocketmq/client/ClientConfig.class" />
     <entry file="jar://$MAVEN_REPOSITORY$/com/alibaba/rocketmq/rocketmq-client/3.2.6/rocketmq-client-3.2.6.jar!/com/alibaba/rocketmq/client/producer/DefaultMQProducer.class" />
@@ -695,20 +765,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ideal-euraka-1001/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="27" column="23" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ideal-rabbitmq-1010/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="14" column="9" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -755,13 +811,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ideal-rabbitmq-1010/src/main/java/com/demo/rabbitmq/test/NewTask.java" />
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="44" column="24" lean-forward="true" selection-start-line="44" selection-start-column="24" selection-end-line="44" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ideal-rabbitmq-1010/src/main/java/com/demo/rabbitmq/rocketmq/Producer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
@@ -769,44 +818,219 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ideal-rabbitmq-1010/pom.xml">
+    <entry file="file://$PROJECT_DIR$/ideal-gateway-1002/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ideal-rabbitmq-1010/src/main/resources/application.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="453">
-          <caret line="23" column="33" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
+        <state relative-caret-position="374">
+          <caret line="17" column="16" lean-forward="true" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/readme.txt">
+    <entry file="file://$PROJECT_DIR$/ideal-rabbitmq-1010/src/main/java/com/demo/rabbitmq/rabbitmq/Send.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+        <state relative-caret-position="131">
+          <caret line="12" column="37" lean-forward="true" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ideal-syn-1011/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="7" lean-forward="true" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ideal-euraka-1001/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ideal-rabbitmq-1010/src/main/java/com/demo/rabbitmq/util/ConnectionUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
-          <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+          <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ideal-rabbitmq-1010/src/main/java/com/demo/rabbitmq/rabbitmq/Send.java">
+    <entry file="file://D:/program/huancun/mvnRepository/org/springframework/cloud/spring-cloud-commons/2.0.2.RELEASE/spring-cloud-commons-2.0.2.RELEASE.pom">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ideal-syn-1011/src/main/java/com/demo/syn/SynApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="9" column="46" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
+        <state relative-caret-position="176">
+          <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#530#531#0" expanded="true" />
+            <element signature="e#568#569#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ideal-syn-1011/src/main/java/com/demo/syn/config/SwaggerConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="20" column="7" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ideal-rabbitmq-1010/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-729">
+          <caret line="7" column="37" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ideal-rabbitmq-1010/src/main/java/com/demo/rabbitmq/RabbitMqApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="17" column="19" selection-start-line="17" selection-end-line="17" selection-end-column="19" />
+          <folding>
+            <element signature="e#591#592#0" expanded="true" />
+            <element signature="e#654#655#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ideal-rabbitmq-1010/src/main/java/com/demo/rabbitmq/rabbitmq/Customer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
+        <state relative-caret-position="475">
           <caret line="24" column="33" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ideal-syn-1011/src/main/resources/log4j2-spring.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ideal-syn-1011/src/main/resources/quartz.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="23" column="48" selection-start-line="23" selection-start-column="48" selection-end-line="23" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ideal-syn-1011/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="331">
+          <caret line="44" column="24" selection-start-line="44" selection-start-column="24" selection-end-line="44" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ideal-syn-1011/src/main/java/com/demo/syn/dto/ScheduleJob.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ideal-syn-1011/src/main/java/com/demo/syn/service/SchedulerJobService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-441">
+          <caret line="17" column="32" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ideal-syn-1011/src/main/java/com/demo/syn/service/QuartzService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ideal-syn-1011/src/main/java/com/demo/syn/util/ApplicationContextUtil.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ideal-syn-1011/src/main/java/com/demo/syn/service/impl/QuartzServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="18" column="13" lean-forward="true" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ideal-syn-1011/src/main/java/com/demo/syn/constants/ResponseEnum.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ideal-syn-1011/src/main/java/com/demo/syn/dto/Result.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2816">
+          <caret line="142" column="13" lean-forward="true" selection-start-line="142" selection-start-column="13" selection-end-line="142" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3765#3766#0" expanded="true" />
+            <element signature="e#3811#3812#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ideal-syn-1011/src/main/java/com/demo/syn/util/DateUtil.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ideal-syn-1011/src/main/java/com/demo/syn/constants/CommConstants.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ideal-syn-1011/src/main/java/com/demo/syn/config/QuartzConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="47" column="44" selection-start-line="47" selection-start-column="44" selection-end-line="47" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ideal-syn-1011/src/main/java/com/demo/syn/service/impl/SchedulerJobServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="488">
+          <caret line="195" column="22" lean-forward="true" selection-start-line="195" selection-start-column="22" selection-end-line="195" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readme.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3256">
+          <caret line="148" column="31" lean-forward="true" selection-start-line="148" selection-start-column="31" selection-end-line="148" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ideal-syn-1011/src/main/java/com/demo/syn/jobs/HelloJob.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="13" column="30" lean-forward="true" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ideal-syn-1011/src/main/java/com/demo/syn/controller/JobController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-639">
+          <caret line="28" column="14" lean-forward="true" selection-start-line="28" selection-start-column="14" selection-end-line="28" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ideal-syn-1011/src/main/java/com/demo/syn/config/ScheduleTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="22" column="14" lean-forward="true" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -865,7 +1089,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>idealeuraka1001</last-edited>
+          <last-edited>idealsyn1011</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

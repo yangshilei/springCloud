@@ -7,6 +7,7 @@
         <module>ideal-euraka-1001</module>
         <module>ideal-gateway-1002</module>
         <module>ideal-rabbitmq-1010</module>
+        <module>ideal-syn-1011</module>
     </modules>
 
     <groupId>com.example</groupId>
@@ -57,6 +58,7 @@
     </dependencyManagement>
 
     <dependencies>
+
         <!--swagger-->
         <dependency>
             <groupId>io.springfox</groupId>
