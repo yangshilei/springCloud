@@ -4,10 +4,10 @@ server:
 spring:
   application:
     name: IDEAL-EURAKA
-#  security:
-#    user:
-#      name: admin
-#      password: 123456
+  security:
+    user:
+      name: admin
+      password: 123456
   main:
     allow-bean-definition-overriding: true
 
@@ -25,6 +25,10 @@ eureka:
     healthcheck:
       enabled: true
   instance:
+    #使用IP访问注册中心
+    prefer-ip-address: true
+    #在注册中心status的时候显示的格式，这里是 ip:端口
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port}
     hostname: localhost
   server:
     #   关闭自我保护
