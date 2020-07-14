@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 @Api(tags = "rabbitMQ消息分发模块")
 @RestController
 @Slf4j
-@RequestMapping("")
+@RequestMapping("test")
 public class TestController {
 
   /**
