@@ -6,17 +6,18 @@ import java.io.IOException;
 
 public class Customer {
 
-    private final static String QUEUE_NAME = "simple_queue";
+    private final static String QUEUE_NAME = "hello world";
 
     public static void main(String[] argv) throws Exception {
 
+        System.out.println("进入消费者方ddd法");
         // 1、获取到连接
         Connection connection = ConnectionUtil.getConnection();
         Channel channel = connection.createChannel();
 
         // 声明一个队列：名称、持久性的（重启仍存在此队列）、非私有的、非自动删除的
         channel.queueDeclare(QUEUE_NAME, true, false, false, null);
-        System.out.println("Waiting for messages.");
+        System.out.println("等待接收消息");
 
         /* 定义消费者 */
         Consumer consumer = new DefaultConsumer(channel) {
@@ -29,8 +30,9 @@ public class Customer {
             }
         };
 
-        // 将消费者绑定到队列，并设置自动确认消息（即无需显示确认，如何设置请慎重考虑）
+        // 设置应答模式，如果位true情况下标识自动应答模式；
         channel.basicConsume(QUEUE_NAME, true, consumer);
+        System.out.println("结束");
     }
 
 }

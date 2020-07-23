@@ -36,7 +36,7 @@ public class Send {
          * 4、body，消息内容
          */
         channel.basicPublish("", QUEUE_NAME, null, message.getBytes());
-        System.out.println("消息发送结束：" + message);
+        System.out.println("xxx消息发送结束：" + message);
 
         try {
 

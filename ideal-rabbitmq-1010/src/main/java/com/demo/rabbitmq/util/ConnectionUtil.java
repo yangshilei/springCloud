@@ -16,6 +16,7 @@ public class ConnectionUtil {
         factory.setPort(5672);
         factory.setUsername("guest");
         factory.setPassword("guest");
+        factory.setVirtualHost("/");
         // 通过工厂获取连接
         Connection connection = factory.newConnection();
         return connection;
