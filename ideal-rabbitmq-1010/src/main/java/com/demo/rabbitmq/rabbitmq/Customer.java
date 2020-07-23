@@ -10,7 +10,7 @@ public class Customer {
 
     public static void main(String[] argv) throws Exception {
 
-        System.out.println("进入消费者方ddd法");
+        System.out.println("进入消费者方法2");
         // 1、获取到连接
         Connection connection = ConnectionUtil.getConnection();
         Channel channel = connection.createChannel();
@@ -26,11 +26,14 @@ public class Customer {
                                        AMQP.BasicProperties properties, byte[] body)
                     throws IOException {
                 String message = new String(body, "UTF-8");
-                System.out.println("接收到的消息====" + message);
+                System.out.println("接收到的消息=" + message);
+
+                // 如果是手动应答模式，必须手动应答，否则队列中持久化的消息会一致存在；
+//                channel.basicAck(envelope.getDeliveryTag(),false);
             }
         };
 
-        // 设置应答模式，如果位true情况下标识自动应答模式；
+        // 设置应答模式，如果位true情况下标识自动应答模式；false是手动应答模式,则需要手动ack；
         channel.basicConsume(QUEUE_NAME, true, consumer);
         System.out.println("结束");
     }

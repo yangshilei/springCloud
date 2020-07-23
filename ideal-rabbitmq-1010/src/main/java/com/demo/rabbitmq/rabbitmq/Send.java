@@ -24,19 +24,22 @@ public class Send {
          * 5、arguments 参数，可以设置一个队列的扩展参数，比如：可设置存活时间
          */
         channel.queueDeclare(QUEUE_NAME, true, false, false, null);
-        // 4、消息内容
-        String message = "Hello World!";
-        // 向指定的队列中发送消息
-        //参数：String exchange, String routingKey, BasicProperties props, byte[] body
-        /**
-         * 参数明细：
-         * 1、exchange，交换机，如果不指定将使用mq的默认交换机（设置为""）
-         * 2、routingKey，路由key，交换机根据路由key来将消息转发到指定的队列，如果使用默认交换机，routingKey设置为队列的名称
-         * 3、props，消息的属性
-         * 4、body，消息内容
-         */
-        channel.basicPublish("", QUEUE_NAME, null, message.getBytes());
-        System.out.println("xxx消息发送结束：" + message);
+
+        // 向指定的队列中发送10条消息，测试消费者均摊模式；
+        for(int i =0; i < 10; i++){
+            // 4、消息内容
+            String message = "Hello World! ---->" + i;
+            /**
+             * 参数明细：String exchange, String routingKey, BasicProperties props, byte[] body
+             * 1、exchange，交换机，如果不指定将使用mq的默认交换机（设置为""）
+             * 2、routingKey，路由key，交换机根据路由key来将消息转发到指定的队列，如果使用默认交换机，routingKey设置为队列的名称
+             * 3、props，消息的属性
+             * 4、body，消息内容
+             */
+            channel.basicPublish("", QUEUE_NAME, null, message.getBytes());
+            System.out.println("生产者简单队列消息发送结束：" + message);
+        }
+
 
         try {
 
