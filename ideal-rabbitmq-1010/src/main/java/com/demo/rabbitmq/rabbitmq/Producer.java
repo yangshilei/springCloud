@@ -5,7 +5,7 @@ import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
 
 
-public class Send {
+public class Producer {
     private final static String QUEUE_NAME = "hello world";
 
     public static void main(String[] argv) throws Exception {
@@ -24,6 +24,7 @@ public class Send {
          * 5、arguments 参数，可以设置一个队列的扩展参数，比如：可设置存活时间
          */
         channel.queueDeclare(QUEUE_NAME, true, false, false, null);
+        channel.basicQos(1);// 公平队列的通道配置；
 
         // 向指定的队列中发送10条消息，测试消费者均摊模式；
         for(int i =0; i < 10; i++){
