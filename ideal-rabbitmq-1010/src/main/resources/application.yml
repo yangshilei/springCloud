@@ -12,6 +12,8 @@ spring:
 #    addresses:
 
 eureka:
+  instance:
+    hostname: rabbit-service
   client:
     serviceUrl:
       defaultZone: http://localhost:1001/eureka/

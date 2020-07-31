@@ -1,0 +1,13 @@
+server:
+  port: 1002
+spring:
+  application:
+    name: IDEAL-GATEWAY
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1001/eureka/
+    # 是否注册自身到eureka服务器
+    register-with-eureka: true
+    fetch-registry: true
