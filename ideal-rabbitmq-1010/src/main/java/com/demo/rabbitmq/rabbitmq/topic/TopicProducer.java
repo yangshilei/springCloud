@@ -20,9 +20,17 @@ public class TopicProducer {
         Channel channel = connection.createChannel();
         channel.exchangeDeclare(exchangeName,DIRECT_TYPE);
 
-        String smsMsg = "sms message";
-        channel.basicPublish(exchangeName,routing_key_sms,null,smsMsg.getBytes());
-        System.out.println("短信消息发送成功");
+        try {
+            channel.txSelect();// 开启手动提交事务
+            String smsMsg = "sms message";
+            channel.basicPublish(exchangeName,routing_key_sms,null,smsMsg.getBytes());
+            channel.txCommit();// 提交事务
+            System.out.println("消息提交结束");
+        }catch (Exception e){
+            channel.txRollback();// 有异常时候回滚
+            System.out.println("程序异常，发送的队列消息回滚");
+        }
+
 
         String emailMsg = "email message";
         channel.basicPublish(exchangeName,routing_key_email,null,emailMsg.getBytes());

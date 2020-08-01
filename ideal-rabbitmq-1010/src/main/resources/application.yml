@@ -4,12 +4,13 @@ server:
 spring:
   application:
     name: IDEAL-RABBITMQ
-#  rabbitmq:
-#    host:
-#    username: "guest"
-#    password: "guest"
-#    port: 5672
-#    addresses:
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+    #虚拟host 可以不设置,使用server默认host
+    virtual-host: /smsAndEmail
 
 eureka:
   instance:
