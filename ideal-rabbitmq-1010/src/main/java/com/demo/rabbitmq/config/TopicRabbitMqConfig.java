@@ -16,7 +16,7 @@ public class TopicRabbitMqConfig {
 
     public static final String CONFIG_EXCHANGE = "config_exchange";
 
-    // 1.定义短信和邮件队列
+    // 1.定义短信和邮件队列,消息持久化
     @Bean
     public Queue configSmsQueue(){
         return new Queue(SMS_QUEUE,true);
@@ -40,6 +40,7 @@ public class TopicRabbitMqConfig {
 
     @Bean
     Binding bindingExchangeEmail(Queue configEmailQueue,TopicExchange configExchange){
-        return BindingBuilder.bind(configEmailQueue).to(configExchange).with("topic.email");
+        // 邮件交换机绑定topic.*路由，可以同时接受短信和邮件的消息
+        return BindingBuilder.bind(configEmailQueue).to(configExchange).with("topic.*");
     }
 }

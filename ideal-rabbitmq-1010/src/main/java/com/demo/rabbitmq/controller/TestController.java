@@ -1,10 +1,14 @@
 package com.demo.rabbitmq.controller;
 
+import com.demo.rabbitmq.config.DxlQueueConfig;
 import com.demo.rabbitmq.config.TopicRabbitMqConfig;
 import com.netflix.discovery.converters.Auto;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.amqp.AmqpException;
+import org.springframework.amqp.core.Message;
+import org.springframework.amqp.core.MessagePostProcessor;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -72,4 +76,21 @@ public class TestController {
     log.info("消息发送成功!");
     return "success";
   }
+
+  @ApiOperation(value = "死信队列测试消息发送", notes = "死信队列测试消息发送")
+  @GetMapping("/producer/dxl/send")
+  String sendDxlMsg(){
+    log.info("进入死信测试消息发送方法");
+    String meg = "dxl message!!!";
+    rabbitTemplate.convertAndSend(DxlQueueConfig.ORDER_EXCHANGE, DxlQueueConfig.ORDER_ROUTE, meg, new MessagePostProcessor() {
+      @Override
+      public Message postProcessMessage(Message message) throws AmqpException {
+        message.getMessageProperties().setExpiration("10000");
+        return message;
+      }
+    });
+    log.info("死信测试消息发送成功");
+    return "success";
+  }
+
 }
