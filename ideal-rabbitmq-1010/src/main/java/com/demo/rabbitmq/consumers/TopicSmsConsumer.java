@@ -13,5 +13,6 @@ public class TopicSmsConsumer {
     @RabbitHandler
     public void process(Map msg){
         System.out.println("短信消费者--->"+msg.toString());
+        int i = 1/0; // 该段代码用来测试重试机制；
     }
 }

@@ -73,7 +73,7 @@ public class RabbitController {
         rabbitTemplate.convertAndSend(DxlQueueConfig.ORDER_EXCHANGE, DxlQueueConfig.ORDER_ROUTE, meg, new MessagePostProcessor() {
             @Override
             public Message postProcessMessage(Message message) throws AmqpException {
-                message.getMessageProperties().setExpiration("10000");
+                message.getMessageProperties().setExpiration("10000");// 发送的消息设定定时时间10秒；
                 return message;
             }
         });
