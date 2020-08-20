@@ -14,11 +14,6 @@ import java.util.Map;
  */
 @Component
 public class TopicEmailConsumer{
-//    ChannelAwareMessageListener
-//    @RabbitHandler
-//    public void process(Map msg){
-//        System.out.println("邮件消费者--->"+msg.toString());
-//    }
 
 
 //    @RabbitHandler
