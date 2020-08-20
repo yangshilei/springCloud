@@ -6,6 +6,7 @@ import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.util.Map;
 
 /**
@@ -15,7 +16,7 @@ import java.util.Map;
 public class TopicEmailConsumer{
 
     @RabbitListener(queues = "topic.email")
-    public void process(Map msg, Message message, Channel channel){
+    public void process(Map msg, Message message, Channel channel) throws UnsupportedEncodingException {
         System.out.println("手动确认消费者方法中"+msg);
         String messageStr = new String(message.getBody());
         System.out.println("获取到的消息"+messageStr);

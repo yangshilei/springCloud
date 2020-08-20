@@ -1,5 +1,6 @@
 package com.demo.rabbitmq.config;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.core.Message;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
 import org.springframework.amqp.rabbit.connection.CorrelationData;
@@ -12,6 +13,7 @@ import org.springframework.context.annotation.Configuration;
  * @Author: yangshilei
  * @Date: 
  */
+@Slf4j
 @Configuration
 public class MsgConfirmConfig {
 
@@ -30,20 +32,22 @@ public class MsgConfirmConfig {
         rabbitTemplate.setConfirmCallback(new RabbitTemplate.ConfirmCallback() {
             @Override
             public void confirm(CorrelationData correlationData, boolean ack, String cause) {
-                System.out.println("ConfirmCallback:     "+"相关数据："+correlationData);
-                System.out.println("ConfirmCallback:     "+"确认情况："+ack);
-                System.out.println("ConfirmCallback:     "+"原因："+cause);
+                log.info("ConfirmCallback:     "+"相关数据："+correlationData);
+                log.info("ConfirmCallback:     "+"确认情况："+ack);
+                log.info("ConfirmCallback:     "+"原因："+cause);
             }
         });
 
         rabbitTemplate.setReturnCallback(new RabbitTemplate.ReturnCallback() {
+
+            // 在发送到交换机但找不到队列的时候，会打印出改行的日志信息
             @Override
             public void returnedMessage(Message message, int replyCode, String replyText, String exchange, String routingKey) {
-                System.out.println("ReturnCallback:     "+"消息："+message);
-                System.out.println("ReturnCallback:     "+"回应码："+replyCode);
-                System.out.println("ReturnCallback:     "+"回应信息："+replyText);
-                System.out.println("ReturnCallback:     "+"交换机："+exchange);
-                System.out.println("ReturnCallback:     "+"路由键："+routingKey);
+                log.info("ReturnCallback:     "+"消息："+message);
+                log.info("ReturnCallback:     "+"回应码："+replyCode);
+                log.info("ReturnCallback:     "+"回应信息："+replyText);
+                log.info("ReturnCallback:     "+"交换机："+exchange);
+                log.info("ReturnCallback:     "+"路由键："+routingKey);
             }
         });
 
