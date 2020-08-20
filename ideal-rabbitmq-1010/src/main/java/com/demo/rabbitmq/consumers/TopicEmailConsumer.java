@@ -2,7 +2,6 @@ package com.demo.rabbitmq.consumers;
 
 import com.rabbitmq.client.Channel;
 import org.springframework.amqp.core.Message;
-import org.springframework.amqp.rabbit.annotation.RabbitHandler;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Component;
 
@@ -15,8 +14,6 @@ import java.util.Map;
 @Component
 public class TopicEmailConsumer{
 
-
-//    @RabbitHandler
     @RabbitListener(queues = "topic.email")
     public void process(Map msg, Message message, Channel channel){
         System.out.println("手动确认消费者方法中"+msg);
@@ -38,4 +35,6 @@ public class TopicEmailConsumer{
             }
         }
     }
+
+
 }

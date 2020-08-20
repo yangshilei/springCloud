@@ -4,7 +4,8 @@ import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.ConnectionFactory;
 
 /**
- * rabbit链接工具类
+ * rabbit链接工具类，
+ * 仅供rabbitemq文件夹下的main方法的测试使用；
  */
 public class ConnectionUtil {
 

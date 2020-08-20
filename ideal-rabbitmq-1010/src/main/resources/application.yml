@@ -20,6 +20,8 @@ spring:
           initial-interval: 1000ms # 第一次和第二次之间的重试间隔，后面的用乘子计算
           multiplier: 2 # 乘子
           max-interval: 3600000ms #最大重试间隔时间
+    publisher-confirms: true #确认消息已发送到交换机(Exchange)
+    publisher-returns: true  #确认消息已发送到队列(Queue)
 
 
 eureka:
