@@ -1,9 +1,9 @@
 package com.demo.rabbitmq.config;
 
-import org.springframework.amqp.core.Binding;
-import org.springframework.amqp.core.BindingBuilder;
-import org.springframework.amqp.core.Queue;
-import org.springframework.amqp.core.TopicExchange;
+import org.springframework.amqp.core.*;
+import org.springframework.amqp.rabbit.connection.CachingConnectionFactory;
+import org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -43,4 +43,5 @@ public class TopicRabbitMqConfig {
         // 邮件交换机绑定topic.*路由，可以同时接受短信和邮件的消息
         return BindingBuilder.bind(configEmailQueue).to(configExchange).with("topic.*");
     }
+
 }

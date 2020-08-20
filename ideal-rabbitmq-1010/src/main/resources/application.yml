@@ -13,12 +13,14 @@ spring:
     virtual-host: /smsAndEmail
     listener:
       simple:
+        acknowledge-mode: manual #开启手动确认消息机制
         retry:
           enabled: true
           max-attempts: 5 # 最大重试次数
           initial-interval: 1000ms # 第一次和第二次之间的重试间隔，后面的用乘子计算
           multiplier: 2 # 乘子
           max-interval: 3600000ms #最大重试间隔时间
+
 
 eureka:
   instance:
