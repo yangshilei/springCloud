@@ -30,15 +30,22 @@ public class ShiroConfig {
         return securityManager;
     }
 
-    //Filter工厂，设置对应的过滤条件和跳转条件
+    /**
+     * Filter工厂，设置对应的过滤条件和跳转条件
+     * authc:所有url都必须认证通过才可以访问
+     * anon:所有url都都可以匿名访问
+     * 过滤链定义，从上向下顺序执行，一般将/**放在最为下边
+     */
     @Bean
     public ShiroFilterFactoryBean shiroFilterFactoryBean(SecurityManager securityManager){
         ShiroFilterFactoryBean shiroFilterFactoryBean = new ShiroFilterFactoryBean();
         shiroFilterFactoryBean.setSecurityManager(securityManager);
         Map<String,String> map = new HashMap<>();
-        // 退出
-        map.put("/logout","logout");
-        // 对所有用户进行认证
+        // 退出无需认证：用anon
+        map.put("/logout","anon");
+        // 静态文件
+        map.put("/static","anon");
+        // 对所有用户进行认证：用authc
         map.put("/**","authc");
         // 设置登陆url
         shiroFilterFactoryBean.setLoginUrl("/login");
