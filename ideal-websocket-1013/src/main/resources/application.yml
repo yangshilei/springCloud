@@ -1,0 +1,16 @@
+server:
+  port: 1013
+
+spring:
+  application:
+    name: IDEAL-WEBSOCKET
+
+eureka:
+  instance:
+    hostname: rabbit-service
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1001/eureka/
+    # 是否注册自身到eureka服务器
+    register-with-eureka: true
+    fetch-registry: true

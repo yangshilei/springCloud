@@ -45,8 +45,12 @@ public class ShiroConfig {
         map.put("/logout","anon");
         // 静态文件
         map.put("/static","anon");
+        // 其它特殊的需要免登陆访问接口
+        map.put("/other/**","anon");
+
         // 对所有用户进行认证：用authc
-        map.put("/**","authc");
+//        map.put("/**","authc");
+        map.put("/**","anon"); // 测试其它功能，默认所有接口无需鉴权，若需要鉴权，放开上一行代码，注释本行
         // 设置登陆url
         shiroFilterFactoryBean.setLoginUrl("/login");
         // 设置首页

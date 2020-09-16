@@ -9,6 +9,7 @@
         <module>ideal-rabbitmq-1010</module>
         <module>ideal-syn-1011</module>
         <module>ideal-shiro-1012</module>
+        <module>ideal-websocket-1013</module>
     </modules>
 
     <groupId>com.example</groupId>
