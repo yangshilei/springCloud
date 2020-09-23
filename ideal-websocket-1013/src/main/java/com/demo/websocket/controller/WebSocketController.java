@@ -28,8 +28,9 @@ public class WebSocketController {
     String sendMessage(){
         log.info("模拟后台产生数据推送");
         Map<String,String> map = new HashMap<>();
-        map.put("userId","1");
-        map.put("message","hello world");
+        // userId为后台websocket推送消息唯一识别码；
+        map.put("userId","13");
+        map.put("message","hello world ysl");
         oneToManyWebSocket.onMessage(JSONObject.toJSONString(map),null);
         return "测试消息发送结束";
     }

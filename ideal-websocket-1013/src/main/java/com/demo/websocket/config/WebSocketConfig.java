@@ -16,7 +16,7 @@ import javax.websocket.server.ServerEndpointConfig;
 public class WebSocketConfig  extends ServerEndpointConfig.Configurator{
 
     /**
-     * 修改握手信息
+     * 修改握手信息，可以给指定的用户id发送消息
      */
     @Override
     public void modifyHandshake(ServerEndpointConfig sec, HandshakeRequest request, HandshakeResponse response) {
