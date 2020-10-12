@@ -21,8 +21,10 @@ public class TestTopicConsumer {
         String topic = record.topic();
         Object value = record.value();
         int partition = record.partition();
+        long offset = record.offset();
         log.info("topic==={}",topic);
         log.info("value==={}",value);
         log.info("partition==={}",partition);
+        log.info("offset==={}",offset);
     }
 }

@@ -1,8 +1,11 @@
 server:
   port: 1014
 
+
 #kafka配置信息
 spring:
+  application:
+    name: IDEAL-KAFKA
   kafka:
     bootstrap-servers: 127.0.0.1:9092 #指定kafka server的地址，集群配多个，中间，逗号隔开
     producer:
@@ -14,3 +17,4 @@ spring:
       auto-commit-interval: 1000
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+

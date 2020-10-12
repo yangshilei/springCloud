@@ -1,0 +1,9 @@
+server:
+  port: 1015
+
+spring:
+  application:
+    name: IDEAL-SPRINGLEARN
+
+
+# 本模块不注册到eureka上，注册到本地nacos上

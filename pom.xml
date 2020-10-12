@@ -11,6 +11,7 @@
         <module>ideal-shiro-1012</module>
         <module>ideal-websocket-1013</module>
         <module>ideal-kafka-1014</module>
+        <module>ideal-spring-1015</module>
     </modules>
 
     <groupId>com.example</groupId>
