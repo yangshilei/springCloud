@@ -12,9 +12,6 @@ import org.springframework.beans.factory.annotation.Autowired;
  */
 public class Test {
 
-    @Autowired
-    private PayServiceImpl payService;
-
     public static void main(String[] args) {
 
         // 第一种：直接定义大括号中方法实现
@@ -29,11 +26,13 @@ public class Test {
         // 调用上面的实现接口的方法
         payService1.getMoney(300);
 
-        // 第二种：方法实现未下面的方式
+        // 第二种：静态方法的方式
         PayService payService2 = Test::getMoney;
         payService2.getMoney(500);
 
-//        PayService payService3 = PayServiceImpl::getMoney;
+        // 第三种：创建实例的方式
+        PayService payService3 = new PayServiceImpl()::getMoney;
+        payService3.getMoney(200);
     }
 
 
