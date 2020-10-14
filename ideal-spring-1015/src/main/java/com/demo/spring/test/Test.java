@@ -2,10 +2,6 @@ package com.demo.spring.test;
 
 import com.demo.spring.service.PayService;
 import com.demo.spring.service.impl.PayServiceImpl;
-import org.springframework.beans.factory.annotation.Autowired;
-
-import java.util.function.BiFunction;
-
 
 /**
  * 方法引入的规范
