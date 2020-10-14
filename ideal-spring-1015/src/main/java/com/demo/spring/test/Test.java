@@ -4,6 +4,8 @@ import com.demo.spring.service.PayService;
 import com.demo.spring.service.impl.PayServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.util.function.BiFunction;
+
 
 /**
  * 方法引入的规范
@@ -33,6 +35,13 @@ public class Test {
         // 第三种：创建实例的方式
         PayService payService3 = new PayServiceImpl()::getMoney;
         payService3.getMoney(200);
+
+        // 第四种： 函数接口中定义默认普通方法是可以被实现类继承使用的；
+        PayService payService4 = new PayServiceImpl();
+        payService4.getTime();
+        System.out.println(payService4.showName("jack"));
+
+
     }
 
 
