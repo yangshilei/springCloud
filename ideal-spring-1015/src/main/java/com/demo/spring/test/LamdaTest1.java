@@ -5,6 +5,7 @@ import com.demo.spring.dto.User;
 
 import java.util.*;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class LamdaTest1 {
     public static void main(String[] args) {
@@ -39,6 +40,22 @@ public class LamdaTest1 {
         Map<String, String> collect2 = collect.stream().collect(Collectors.toMap(User::getUsername, User::getAge));
         System.out.println(collect2);
 
+        // 3.stream求和、求最大值、求最小值
+        Stream<Integer> integerStream = Stream.of(10, 20, 30, 10, 5);
+        Optional<Integer> reduce = integerStream.reduce((a1, a2) -> (a1 + a2));
+        System.out.println(reduce.get());
+//        Optional<User> reduce1 = users.stream().reduce(((user1, user2) -> {
+//            user1.setAge(Integer.parseInt(user1.getAge()) + Integer.parseInt(user2.getAge()) + "");
+//            return user1;
+//        }));
+//        System.out.println("求和："+reduce1.get().getAge());
 
+        // 求最大最小值
+        Optional<User> max = users.stream().max((user1, user2) -> Integer.parseInt(user1.getAge()) - Integer.parseInt(user2.getAge()));
+        System.out.println("求最大值"+max);
+        Optional<User> min = users.stream().min((user1, user2) -> Integer.parseInt(user1.getAge()) - Integer.parseInt(user2.getAge()));
+        System.out.println("求最小值"+min);
+
+        // 4.
     }
 }
