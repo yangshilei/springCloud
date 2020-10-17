@@ -1,5 +1,7 @@
 package com.demo.spring.service;
 
+import com.demo.spring.dto.Result;
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -16,9 +18,11 @@ public interface PayService {
         return "hello "+name;
     }
 
-    public default void getTime(){
+    default void getTime(){
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         System.out.println("现在时间 "+ format.format(new Date()));
     }
+
+
 
 }
