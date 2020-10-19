@@ -2,15 +2,10 @@ springcloud模块学习内容：
     1.注册中心：euraka
     2.路由：gateway
     3.MQ消息分发：rabbitMQ
-    4.redis缓存以及mongoDB
-
-
-待学习模块：
-    1.定时任务模块
-    2.websocket模块
-    3.kaffka模块
-
-
+    4.shiro： 鉴权与权限管理
+    5.websocket：即时双工前后端数据交互
+    6.kafka 消息订阅使用
+    7.redis缓存以及mongoDB
 
 
 
