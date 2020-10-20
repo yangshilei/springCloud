@@ -1,4 +1,4 @@
-package com.demo.spring.test;
+package com.demo.spring.test.baseThread;
 
 /**
  * 如何优雅的停掉线程

@@ -1,4 +1,4 @@
-package com.demo.spring.test;
+package com.demo.spring.test.stream;
 
 import com.alibaba.fastjson.JSONObject;
 import com.demo.spring.dto.User;

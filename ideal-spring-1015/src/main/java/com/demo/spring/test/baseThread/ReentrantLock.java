@@ -1,4 +1,4 @@
-package com.demo.spring.test;
+package com.demo.spring.test.baseThread;
 
 /**
  * 可重入锁：基本锁都有可重入性，否则很容易导致死锁
@@ -24,6 +24,7 @@ public class ReentrantLock implements Runnable{
         }
     }
 
+    // 也是使用this锁
     private synchronized void methodB(){
         num++;
         System.out.println("我是方法B，模拟发送邮件");
