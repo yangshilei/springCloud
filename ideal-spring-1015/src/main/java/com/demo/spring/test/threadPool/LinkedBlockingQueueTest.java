@@ -38,8 +38,9 @@ public class LinkedBlockingQueueTest {
         for(int i = 1 ;i <= 5;i++){
             Object poll = null;
             try {
-                poll = linkedBlockingQueue.poll(2, TimeUnit.SECONDS);
-            } catch (InterruptedException e) {
+//                poll = linkedBlockingQueue.poll(2, TimeUnit.SECONDS);
+                poll = linkedBlockingQueue.poll();
+            } catch (Exception e) {
                 System.out.println("取值异常"+i);
 
             }
