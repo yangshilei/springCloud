@@ -36,13 +36,14 @@ public class SynCounter implements Runnable{
 
     public static void main(String[] args) {
         SynCounter synCounter = new SynCounter();
-        int corePoolSize = 20; // 线程池中运行的线程数量
-        int maximumPoolSize = 40; // 线程池中最大线程数量
+        int corePoolSize = 4; // 线程池中运行的线程数量
+        int maximumPoolSize = 8; // 线程池中最大线程数量
         long keepAliveTime = 0L; // 空闲线程的存活时间
-        BlockingQueue<Runnable> workQueue = new ArrayBlockingQueue<Runnable>(10); // 任务队列，被提交但是尚未执行的任务
+        BlockingQueue<Runnable> workQueue = new ArrayBlockingQueue<Runnable>(100); // 任务队列，被提交但是尚未执行的任务
 
-        ThreadFactory threadFactorynew = new CustomizableThreadFactory("YSL-threadName-");//线程工厂，一般用默认的就行；
+        ThreadFactory threadFactorynew = new CustomizableThreadFactory("ThreadName-");//线程工厂，一般用默认的就行；
         ThreadFactory factory = new ThreadFactoryBuilder().setNameFormat("order-net-%d").build(); // build创建线程工厂模式；
+
 
         RejectedExecutionHandler handler = new CallerRunsPolicy(); // 拒绝策略：当任务数量超过线程池线线程以及队列可处理数量以后，多余的任务如何处理；
         // 自定义线程池
