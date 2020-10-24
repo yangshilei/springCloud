@@ -10,7 +10,7 @@ import java.util.concurrent.ThreadPoolExecutor.DiscardOldestPolicy;
 import java.util.concurrent.ThreadPoolExecutor.DiscardPolicy;
 
 /**
- * @Description: 设计使用4个线程输出1-100
+ * @Description: 设计使用synchronized线程安全来调用4个线程输出1-100
  * @Author: yangshilei
  * @Date:
  */
