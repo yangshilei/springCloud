@@ -1,0 +1,8 @@
+该目类中的类主要测试功能：
+使用ThreadLocal模拟前端100个用户同时请求并发访问
+
+Tenant：租户对象
+HtmlRequest：用户模拟100个前端请求的线程
+TenantIdAction：上下文中取出的租户设置tenantId和tenantName
+
+TenantContext: 创建上下文对象 ，用于传递参数，从前端传递到控制层等

@@ -52,7 +52,7 @@ public class SynCounter implements Runnable{
                         workQueue, threadFactorynew,handler);
 
         // 创建的线程池：阿里规范不推荐，因为默认使用了LinkedBlockingQueue无界模式，容易导致资源耗尽；
-        ExecutorService executorService = Executors.newFixedThreadPool(10);
+//        ExecutorService executorService = Executors.newFixedThreadPool(10);
 
         for(int i = 0; i< 100;i++){
             poolExecutor.submit(synCounter);
