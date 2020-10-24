@@ -62,6 +62,7 @@ public class MyThreadPoolExecutor {
                 // 2.队列中取任务执行，取完删掉对应任务；
                 Runnable task = null;
                 try {
+                    // 此处不用poll，poll会不停的取，导致CPU使用率居高不下；用take会等待;
                     task = workQueue.take();
                 } catch (InterruptedException e) {
                     e.printStackTrace();
@@ -129,7 +130,8 @@ class SendEmailTask implements Runnable{
     @Override
     public void run() {
         try {
-            Thread.sleep(new Random().nextInt(500));
+            // 模拟实际业务处理占用的时间
+            Thread.sleep(new Random().nextInt(2000));
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
