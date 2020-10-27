@@ -26,6 +26,7 @@ public class TestController {
     @ApiOperation(value = "测试接口",notes = "测试接口")
     @PostMapping("/test")
     Result test(){
+        System.out.println("进入测试方法");
         return Result.ok("success");
     }
 

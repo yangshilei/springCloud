@@ -1,9 +1,12 @@
 package com.demo.spring.test.baseThread;
 
+import com.demo.spring.annotation.ThreadSafe;
+
 /**
  * 可重入锁：基本锁都有可重入性，否则很容易导致死锁
  * 死锁产生原因：在同步方法中嵌套同步方法
  */
+@ThreadSafe
 public class ReentrantLock implements Runnable{
 
     private volatile Integer num = 0;
