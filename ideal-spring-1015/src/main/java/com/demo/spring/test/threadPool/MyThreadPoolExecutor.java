@@ -43,7 +43,7 @@ public class MyThreadPoolExecutor {
             TaskThread workThread = new TaskThread();
             Thread thread = new Thread(workThread);
             thread.start();
-            this.threads.add(workThread);
+//            this.threads.add(workThread);
         }
 
 
