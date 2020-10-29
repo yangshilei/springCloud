@@ -11,15 +11,14 @@ import java.util.concurrent.TimeUnit;
  */
 public class LinkedBlockingQueueTest {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         BlockingQueue linkedBlockingQueue  = new LinkedBlockingQueue(4);
         linkedBlockingQueue.offer("yangshilei");
         linkedBlockingQueue.offer("tom");
         linkedBlockingQueue.offer("tom2");
         boolean tom3 = linkedBlockingQueue.offer("tom3");
         System.out.println(tom3);
-        boolean tom4 = linkedBlockingQueue.offer("tom4");
-        System.out.println(tom4);
+
 //        try {
 //            linkedBlockingQueue.put("tom5");
 //        } catch (InterruptedException e) {
@@ -31,6 +30,8 @@ public class LinkedBlockingQueueTest {
         Object poll1 = linkedBlockingQueue.poll();
         System.out.println("poll："+poll1.toString());
 
+        linkedBlockingQueue.put("tom4");
+        System.out.println();
         // peek取出不会删除队列中的消息
         Object peek = linkedBlockingQueue.peek();
         System.out.println("peek："+peek.toString());
@@ -39,7 +40,7 @@ public class LinkedBlockingQueueTest {
             Object poll = null;
             try {
 //                poll = linkedBlockingQueue.poll(2, TimeUnit.SECONDS);
-                poll = linkedBlockingQueue.poll();
+                poll = linkedBlockingQueue.take();
             } catch (Exception e) {
                 System.out.println("取值异常"+i);
 
