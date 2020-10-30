@@ -8,6 +8,7 @@ import java.util.concurrent.ThreadPoolExecutor.AbortPolicy;
 import java.util.concurrent.ThreadPoolExecutor.CallerRunsPolicy;
 import java.util.concurrent.ThreadPoolExecutor.DiscardOldestPolicy;
 import java.util.concurrent.ThreadPoolExecutor.DiscardPolicy;
+import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * @Description: 设计使用synchronized线程安全来调用4个线程输出1-100
@@ -18,19 +19,24 @@ public class SynCounter implements Runnable{
 
     int num = 1;
 
+    // 无锁且线程安全的整数，可以替换用synchronized；
+    AtomicInteger integer = new AtomicInteger();
+
     @Override
     public void run() {
-        synchronized (this){
-            if(num <= 100){
-                try {
-                    Thread.sleep(10);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-                System.out.println(Thread.currentThread().getName()+":"+num);
-            }
-            num++;
-        }
+        int i = integer.incrementAndGet();
+        System.out.println(Thread.currentThread().getName()+":"+i);
+//        synchronized (this){
+//            if(num <= 100){
+//                try {
+//                    Thread.sleep(10);
+//                } catch (InterruptedException e) {
+//                    e.printStackTrace();
+//                }
+//                System.out.println(Thread.currentThread().getName()+":"+num);
+//            }
+//            num++;
+//        }
     }
 
 
