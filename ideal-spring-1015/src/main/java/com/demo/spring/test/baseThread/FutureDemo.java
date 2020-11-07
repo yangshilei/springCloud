@@ -36,6 +36,7 @@ public class FutureDemo implements Callable {
 
 
         System.out.println("最终数据==="+futureTask.get());
+        pool.shutdown();
     }
 
 }
