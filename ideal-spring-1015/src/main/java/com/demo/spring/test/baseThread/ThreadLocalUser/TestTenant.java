@@ -1,7 +1,4 @@
-package com.demo.spring.test.ThreadLocalUser;
-
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
+package com.demo.spring.test.baseThread.ThreadLocalUser;
 
 public class TestTenant {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package com.demo.spring.test.ThreadLocalUser;
+package com.demo.spring.test.baseThread.ThreadLocalUser;
 
 
 

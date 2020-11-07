@@ -1,4 +1,4 @@
-package com.demo.spring.test.ThreadLocalUser;
+package com.demo.spring.test.baseThread.ThreadLocalUser;
 
 /** 
  * @Description: 模拟前端发送请求，进行参数的预封装；
