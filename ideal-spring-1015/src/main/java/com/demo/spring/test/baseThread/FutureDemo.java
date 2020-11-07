@@ -20,11 +20,6 @@ public class FutureDemo implements Callable {
         return stringBuffer.toString();
     }
 
-
-
-}
-
-class mainDemo{
     public static void main(String[] args) throws ExecutionException, InterruptedException {
         ExecutorService pool = Executors.newFixedThreadPool(4);
         FutureTask<String> futureTask = new FutureTask<String>(new FutureDemo("hellow "));
@@ -42,4 +37,6 @@ class mainDemo{
 
         System.out.println("最终数据==="+futureTask.get());
     }
+
 }
+
