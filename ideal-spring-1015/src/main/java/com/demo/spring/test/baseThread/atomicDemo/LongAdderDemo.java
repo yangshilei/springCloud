@@ -6,6 +6,11 @@ import java.util.concurrent.*;
 import java.util.concurrent.ThreadPoolExecutor.CallerRunsPolicy;
 import java.util.concurrent.atomic.LongAdder;
 
+/**
+ * @Description:  LongAdder原子性操作演示，以及线程池的活跃和剩余线程展示
+ * @Author: yangshilei
+ * @Date:
+ */
 public class LongAdderDemo {
 
     public static void main(String[] args) {
@@ -37,19 +42,18 @@ public class LongAdderDemo {
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
-
+                    System.out.println("剩余活跃线程数量=="+poolExecutor.getActiveCount());
                     // 当前线程执行完才释放
                     countDownLatch.countDown();
                 });
             }
-
             countDownLatch.await();
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
             poolExecutor.shutdown();
         }
-
+        System.out.println("剩余空闲线程数量=="+(maxmumPoolSize-poolExecutor.getActiveCount()));
         System.out.println("最后="+longAdder);
     }
 
