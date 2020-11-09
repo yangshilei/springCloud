@@ -1,17 +1,15 @@
 package com.demo.spring.test.baseThread.atomicDemo;
 
-import com.demo.spring.annotation.ThreadSafe;
 import org.springframework.scheduling.concurrent.CustomizableThreadFactory;
 
 import java.util.concurrent.*;
 import java.util.concurrent.ThreadPoolExecutor.CallerRunsPolicy;
 import java.util.concurrent.atomic.LongAdder;
 
-@ThreadSafe
 public class LongAdderDemo {
 
     public static void main(String[] args) {
-        int corePoolSize = 4;
+        int corePoolSize = 8;
         int maxmumPoolSize = 8;
         long keepAliveTime = 0L;
         BlockingQueue blockingQueue = new ArrayBlockingQueue(100);
@@ -21,25 +19,38 @@ public class LongAdderDemo {
         ThreadPoolExecutor poolExecutor = new ThreadPoolExecutor(corePoolSize,maxmumPoolSize,keepAliveTime,TimeUnit.SECONDS,
                 blockingQueue,factory,handler);
 
+        //设置线程的并发量
+        final Semaphore semaphore=new Semaphore(maxmumPoolSize);
+
+        //线程同步类
+        final CountDownLatch countDownLatch=new CountDownLatch(maxmumPoolSize);
+
         LongAdder longAdder = new LongAdder();
         try {
-            for(int i  = 0;i<100;i++){
+            for(int i  = 0;i<maxmumPoolSize;i++){
                 poolExecutor.submit(() -> {
-                    longAdder.add(1);
-                    System.out.println("执行任务="+longAdder);
+                    try {
+                        semaphore.acquire();
+                        longAdder.add(1);
+                        System.out.println("线程"+Thread.currentThread().getName()+"的值="+longAdder);
+                        semaphore.release();
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+
+                    // 当前线程执行完才释放
+                    countDownLatch.countDown();
                 });
             }
 
-        }finally {
+            countDownLatch.await();
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
             poolExecutor.shutdown();
         }
 
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        System.out.println("===="+longAdder);
+        System.out.println("最后="+longAdder);
     }
 
 }
