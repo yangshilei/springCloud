@@ -9,7 +9,7 @@ import java.util.concurrent.atomic.LongAdder;
 public class LongAdderDemo {
 
     public static void main(String[] args) {
-        int corePoolSize = 8;
+        int corePoolSize = 4;
         int maxmumPoolSize = 8;
         long keepAliveTime = 0L;
         BlockingQueue blockingQueue = new ArrayBlockingQueue(100);
