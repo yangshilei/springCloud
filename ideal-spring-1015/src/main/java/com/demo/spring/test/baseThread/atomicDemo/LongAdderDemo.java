@@ -1,11 +1,13 @@
 package com.demo.spring.test.baseThread.atomicDemo;
 
+import com.demo.spring.annotation.ThreadSafe;
 import org.springframework.scheduling.concurrent.CustomizableThreadFactory;
 
 import java.util.concurrent.*;
 import java.util.concurrent.ThreadPoolExecutor.CallerRunsPolicy;
 import java.util.concurrent.atomic.LongAdder;
 
+@ThreadSafe
 public class LongAdderDemo {
 
     public static void main(String[] args) {
