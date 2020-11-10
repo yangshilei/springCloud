@@ -1,0 +1,50 @@
+package com.demo.spring.test.baseThread.并发容器;
+
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
+/**
+ * @Description: juc包中的线程并发容器
+ * @Author: yangshilei
+ */
+public class CopyOnWriteArrayListDemo implements Runnable{
+
+    private static List<Integer> copyOnWriteArrayList = new CopyOnWriteArrayList<>();
+    private CountDownLatch countDownLatch;
+
+    public CopyOnWriteArrayListDemo(CountDownLatch countDownLatch){
+        this.countDownLatch = countDownLatch;
+    }
+
+    @Override
+    public void run() {
+        copyOnWriteArrayList.add(1);
+        System.out.println(Thread.currentThread().getName()+":"+copyOnWriteArrayList.size());
+        countDownLatch.countDown();
+    }
+
+    public static void main(String[] args) {
+        ExecutorService pool = Executors.newFixedThreadPool(20);
+        CountDownLatch countDownLatch = new CountDownLatch(5000);
+        CopyOnWriteArrayListDemo demo = new CopyOnWriteArrayListDemo(countDownLatch);
+        try {
+            for(int i = 0;i<5000;i++){
+                pool.execute(demo);
+            }
+            try {
+                countDownLatch.await();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            System.out.println("the end "+copyOnWriteArrayList.size());
+        }finally {
+            pool.shutdown();
+        }
+
+    }
+}

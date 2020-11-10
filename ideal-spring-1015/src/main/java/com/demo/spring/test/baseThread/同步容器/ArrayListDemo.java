@@ -1,4 +1,4 @@
-package com.demo.spring.test.baseThread.集合类;
+package com.demo.spring.test.baseThread.同步容器;
 
 import java.util.ArrayList;
 import java.util.Collections;
