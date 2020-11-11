@@ -7,7 +7,7 @@ import com.demo.spring.annotation.ThreadSafe;
  * 死锁产生原因：在同步方法中嵌套同步方法
  */
 @ThreadSafe
-public class ReentrantLock implements Runnable{
+public class SynchronizedReentrantLock implements Runnable{
 
     private volatile Integer num = 0;
 
@@ -34,7 +34,7 @@ public class ReentrantLock implements Runnable{
     }
 
     public static void main(String[] args) {
-        ReentrantLock reentryLock= new ReentrantLock();
+        SynchronizedReentrantLock reentryLock= new SynchronizedReentrantLock();
         Thread thread = new Thread(reentryLock,"窗口1");
         Thread thread1 = new Thread(reentryLock,"窗口2");
         Thread thread2 = new Thread(reentryLock,"窗口3");
