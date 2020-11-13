@@ -21,17 +21,19 @@ public class CopyOnWriteArrayListDemo implements Runnable{
 
     @Override
     public void run() {
-        copyOnWriteArrayList.add(1);
-        System.out.println(Thread.currentThread().getName()+":"+copyOnWriteArrayList.size());
-        countDownLatch.countDown();
+        synchronized (this){ // 如果不加锁，下面的输出结果可能会存在重复的值
+            copyOnWriteArrayList.add(1);
+            System.out.println(Thread.currentThread().getName()+":"+copyOnWriteArrayList.size());
+            countDownLatch.countDown();
+        }
     }
 
     public static void main(String[] args) {
         ExecutorService pool = Executors.newFixedThreadPool(20);
-        CountDownLatch countDownLatch = new CountDownLatch(5000);
+        CountDownLatch countDownLatch = new CountDownLatch(50);
         CopyOnWriteArrayListDemo demo = new CopyOnWriteArrayListDemo(countDownLatch);
         try {
-            for(int i = 0;i<5000;i++){
+            for(int i = 0;i<50;i++){
                 pool.execute(demo);
             }
             try {

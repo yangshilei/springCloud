@@ -36,8 +36,10 @@ public class LongAdderDemo {
                 poolExecutor.submit(() -> {
                     try {
                         semaphore.acquire();
-                        longAdder.add(1);
-                        System.out.println("线程"+Thread.currentThread().getName()+"的值="+longAdder);
+                        synchronized (LongAdderDemo.class){
+                            longAdder.add(1);
+                            System.out.println("线程"+Thread.currentThread().getName()+"的值="+longAdder);
+                        }
                         semaphore.release();
                     } catch (InterruptedException e) {
                         e.printStackTrace();
