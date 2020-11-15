@@ -47,6 +47,7 @@ public class DxlQueueConfig {
         return new TopicExchange(ORDER_EXCHANGE);
     }
 
+    // 死信队列
     @Bean
     public Queue getOrderQueue(){
         Map<String,Object> map = new HashMap<>(2);
@@ -55,6 +56,7 @@ public class DxlQueueConfig {
         return new Queue(ORDER_QUEUE,true,false,false,map);
     }
 
+    // 死信队列交换机
     @Bean
     Binding bindOrderQueue2OrderExchange(Queue getOrderQueue,TopicExchange getOrderExchange){
         return BindingBuilder.bind(getOrderQueue).to(getOrderExchange).with(ORDER_ROUTE);
