@@ -1,6 +1,7 @@
 package com.demo.spring.test.baseThread.并发容器;
 
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.locks.ReentrantLock;
@@ -13,7 +14,7 @@ public class ConcurrentHashMapDemo implements Runnable{
 
     private final static ConcurrentHashMap<String,String> map = new ConcurrentHashMap();
 
-    private final static ReentrantLock lock = new ReentrantLock();
+    private final static  CountDownLatch latch = new CountDownLatch(100);
 
     private String key;
 
@@ -26,13 +27,8 @@ public class ConcurrentHashMapDemo implements Runnable{
 
     @Override
     public void run() {
-        lock.lock();
-        try {
-            map.put(key,value);
-            System.out.println("map集合的大小：" + map.size());
-        }finally {
-            lock.unlock();
-        }
+        map.put(key,value);
+        latch.countDown();
     }
 
 
@@ -43,9 +39,14 @@ public class ConcurrentHashMapDemo implements Runnable{
                 ConcurrentHashMapDemo demo = new ConcurrentHashMapDemo("key"+i,"value"+i);
                 pool.execute(demo);
             }
-        }finally {
+            latch.await();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } finally {
             pool.shutdown();
         }
+        System.out.println("map中的属性数量="+map.size());
+
 
     }
 }
