@@ -10,6 +10,7 @@ import javax.websocket.server.ServerEndpoint;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
@@ -22,7 +23,7 @@ public class OneToManyWebSocket {
 
     private static AtomicInteger onlineCount  = new AtomicInteger(0);
 
-    private static Map<String, Session> clients = new HashMap<>();
+    private static Map<String, Session> clients = new ConcurrentHashMap<>();
 
 
     /**
@@ -46,6 +47,12 @@ public class OneToManyWebSocket {
         log.info("有一连接关闭：{}，当前在线人数为：{}", session.getId(), onlineCount.get());
     }
 
+    @OnError
+    public void onError(Session session, Throwable error) {
+        log.error("发生错误");
+        error.printStackTrace();
+    }
+
     /**
      * 收到客户端消息后调用的方法, 客户端发送过来的消息
      */
@@ -53,12 +60,6 @@ public class OneToManyWebSocket {
     public void onMessage(String message, Session session) {
 //        log.info("服务端收到客户端[{}]的消息:{}", session.getId(), message);
         this.sendMessage(message, session);
-    }
-
-    @OnError
-    public void onError(Session session, Throwable error) {
-        log.error("发生错误");
-        error.printStackTrace();
     }
 
     /**
@@ -73,7 +74,7 @@ public class OneToManyWebSocket {
             try {
                 session13.getBasicRemote().sendText(message);
             } catch (IOException e) {
-                e.printStackTrace();
+               log.error("发送websocket消息失败：{}",e.getMessage());
             }
         }
 

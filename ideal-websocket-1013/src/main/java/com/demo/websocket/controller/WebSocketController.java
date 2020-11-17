@@ -31,7 +31,7 @@ public class WebSocketController {
         // userId为后台websocket推送消息唯一识别码；
         map.put("userId","13");
         map.put("message","hello world ysl");
-        oneToManyWebSocket.onMessage(JSONObject.toJSONString(map),null);
+        oneToManyWebSocket.sendMessage(JSONObject.toJSONString(map),null);
         return "测试消息发送结束";
     }
 
