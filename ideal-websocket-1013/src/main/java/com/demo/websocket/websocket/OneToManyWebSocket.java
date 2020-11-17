@@ -8,9 +8,12 @@ import javax.websocket.*;
 import javax.websocket.server.PathParam;
 import javax.websocket.server.ServerEndpoint;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
@@ -25,6 +28,8 @@ public class OneToManyWebSocket {
 
     private static Map<String, Session> clients = new ConcurrentHashMap<>();
 
+    private static Map<String, List<Session>> clients2 = new ConcurrentHashMap<>();
+
 
     /**
      * 连接建立成功调用的方法
@@ -35,6 +40,11 @@ public class OneToManyWebSocket {
         onlineCount.incrementAndGet();
         clients.put(userId,session);
         log.info("有新连接加入：{}，当前在线人数为：{}", session.getId(), onlineCount.get());
+
+
+        // 如果是想推送给同一个用户的不同客户端，可以通过集合存放session的形式；
+//        CopyOnWriteArrayList<Session> list = new CopyOnWriteArrayList<Session>();
+//        clients2.put("userId",list);
     }
 
     /**
