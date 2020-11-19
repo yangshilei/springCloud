@@ -7,6 +7,7 @@ import java.io.*;
  *
  */
 public class FileCopy {
+
     public static void main(String[] args)  {
 
         String filePath = "C:\\work\\ip\\";
@@ -49,8 +50,6 @@ public class FileCopy {
                 e.printStackTrace();
             }
         }
-
-
 
     }
 
