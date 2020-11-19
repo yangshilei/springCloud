@@ -1,14 +1,12 @@
-package com.demo.spring.test;
+package com.demo.spring.test.java;
 
-
-import org.springframework.util.StringUtils;
 
 import java.io.*;
 
 /**
  *
  */
-public class Test {
+public class FileCopy {
     public static void main(String[] args)  {
 
         String filePath = "C:\\work\\ip\\";
