@@ -9,6 +9,7 @@ import org.springframework.stereotype.Component;
 import javax.websocket.*;
 import javax.websocket.server.ServerEndpoint;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -47,8 +48,14 @@ public class UserWebSocket {
     @OnMessage
     public void onMessage(String message, Session session){
         UserDto userDto = JSON.parseObject(message, UserDto.class);
-        List<Session> list = new CopyOnWriteArrayList<>();
-        list.add(session);
+        List<Session> list = clients.get(userDto.getUserId());
+        if(null == list){
+            list = new CopyOnWriteArrayList<Session>();
+            list.add(session);
+        }else {
+            list.add(session);
+
+        }
         clients.put(userDto.getUserId(),list);
         log.info("用户新的客户端加入成功");
     }

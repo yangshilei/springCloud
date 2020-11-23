@@ -5,12 +5,18 @@ spring:
   application:
     name: IDEAL-WEBSOCKET
 
+#eureka:
+#  instance:
+#    prefer-ip-address: true # 注册服务的时候使用服务的ip地址
+##    hostname: websocket-service
+#  client:
+#    service-url:
+#      defaultZone: http://localhost:1001/eureka/
+#    # 是否注册自身到eureka服务器
+#    register-with-eureka: true
+#    fetch-registry: true
+
 eureka:
-  instance:
-    hostname: rabbit-service
   client:
-    serviceUrl:
-      defaultZone: http://localhost:1001/eureka/
-    # 是否注册自身到eureka服务器
-    register-with-eureka: true
-    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:1001/eureka
