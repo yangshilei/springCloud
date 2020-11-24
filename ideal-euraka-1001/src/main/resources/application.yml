@@ -12,34 +12,24 @@ spring:
 #    allow-bean-definition-overriding: true
 
 
-#eureka:
-#  client:
-#    #   单节点该项设为false， 代表不向服务中心注册自己
-#    register-with-eureka: false
-#    #   单服务注册中心的职责是维护服务实例，他不需要检索服务，所以也为false
-#    fetch-registry: false
-#    service-url:
-#      #     这一行配置主要起到的作用是将当前的eureka注册到另一个eureka上去。
-#      defaultZone: http://localhost:${server.port}/eureka/
-#    #   Eureka健康检查
-#    healthcheck:
-#      enabled: true
-#  instance:
-#    #使用IP访问注册中心
-#    prefer-ip-address: true
-#    #在注册中心status的时候显示的格式，这里是 ip:端口
-#    instance-id: ${spring.cloud.client.ipAddress}:${server.port}
-#    hostname: localhost
-#  server:
-#    #   关闭自我保护
-#    enable-self-preservation: false
-#
-
 eureka:
-  instance:
-    hostname: localhost
   client:
-    registerWithEureka: false
-    fetchRegistry: false
-    serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+    #   单节点该项设为false， 代表不向服务中心注册自己
+    register-with-eureka: false
+    #   单服务注册中心的职责是维护服务实例，他不需要检索服务，所以也为false
+    fetch-registry: false
+    service-url:
+      #     这一行配置主要起到的作用是将当前的eureka注册到另一个eureka上去。
+      defaultZone: http://localhost:${server.port}/eureka/
+    #   Eureka健康检查
+    healthcheck:
+      enabled: true
+  instance:
+    #使用IP访问注册中心
+    prefer-ip-address: true
+    #在注册中心status的时候显示的格式，这里是 ip:端口
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port}
+    hostname: localhost
+  server:
+    #   关闭自我保护
+    enable-self-preservation: false
