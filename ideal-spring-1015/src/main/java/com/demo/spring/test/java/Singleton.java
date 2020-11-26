@@ -1,5 +1,7 @@
 package com.demo.spring.test.java;
 
+import java.lang.reflect.Constructor;
+
 /**
  * @Description: 单例模式：
  */
@@ -16,6 +18,7 @@ public class Singleton {
     }
 
     public static Singleton getSingleton(){
+
         return SingletonInst.singleton;
     }
 
@@ -32,5 +35,6 @@ public class Singleton {
         // 第三次获取实例
         Singleton singleton3 = Singleton.getSingleton();
         System.out.println("结束3");
+
     }
 }

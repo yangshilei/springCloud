@@ -1,5 +1,7 @@
 package com.demo.spring.test.java;
 
+import java.lang.reflect.Constructor;
+
 /**
  * @Description: 线程安全的枚举式单例模式：推荐使用的单例
  * @Author: yangshilei
@@ -39,5 +41,18 @@ public class EnumSingleton {
         System.out.println(2);
         EnumSingleton enumSingleton3 = EnumSingleton.getEnumSingleton();
         System.out.println(3);
+
+
+        // 使用反射破坏单例测试代码
+        try {
+            System.out.println("开始反射破解单例");
+            Class<EnumSingleton> singleClass  = (Class<EnumSingleton>) Class.forName("com.demo.spring.test.java.EnumSingleton");
+            Constructor<EnumSingleton> declaredConstructor = singleClass.getDeclaredConstructor(null);
+            declaredConstructor.setAccessible(true);
+            EnumSingleton reflixSingleton = declaredConstructor.newInstance();
+            System.out.println("反射获取到实例=={}"+reflixSingleton);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
