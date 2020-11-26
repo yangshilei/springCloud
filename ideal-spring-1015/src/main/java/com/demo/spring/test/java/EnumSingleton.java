@@ -45,7 +45,7 @@ public class EnumSingleton {
 
         // 使用反射破坏单例测试代码
         try {
-            System.out.println("开始反射破解单例");
+            System.out.println("开始s反射破解单例");
             Class<EnumSingleton> singleClass  = (Class<EnumSingleton>) Class.forName("com.demo.spring.test.java.EnumSingleton");
             Constructor<EnumSingleton> declaredConstructor = singleClass.getDeclaredConstructor(null);
             declaredConstructor.setAccessible(true);
