@@ -11,9 +11,9 @@
 
     <artifactId>ideal-shiro-1012</artifactId>
 
-    <properties>
-        <java.version>1.8</java.version>
-    </properties>
+    <!--<properties>-->
+        <!--<java.version>1.8</java.version>-->
+    <!--</properties>-->
 
     <dependencies>
         <dependency>
@@ -41,7 +41,7 @@
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-netflix-eureka-client</artifactId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
     </dependencies>
 
