@@ -12,6 +12,7 @@
         <module>ideal-websocket-1013</module>
         <module>ideal-kafka-1014</module>
         <module>ideal-spring-1015</module>
+        <module>ideal-mycat-1016</module>
     </modules>
 
     <groupId>com.example</groupId>
