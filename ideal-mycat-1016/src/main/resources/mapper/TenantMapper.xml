@@ -3,7 +3,7 @@
 <mapper namespace="com.demo.mycat.mapper.TenantMapper">
 
     <select id="queryAllTenant" resultType="com.demo.mycat.dto.Tenant">
-      SELECT tenant_id,tenant_name,phone from tenant
+      SELECT id,tenant_id,tenant_name,phone from tenant
     </select>
 
 </mapper>
