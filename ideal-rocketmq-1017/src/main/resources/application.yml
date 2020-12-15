@@ -1,0 +1,24 @@
+server:
+  port: 1017
+
+spring:
+  main:
+    # 允许bean定义重写
+    allow-bean-definition-overriding: true
+  application:
+    name: IDEAL-ROCKETMQ
+
+
+eureka:
+  instance:
+    prefer-ip-address: true # 注册服务的时候使用服务的ip地址
+    hostname: mycat-service
+  client:
+    service-url:
+      defaultZone: http://localhost:1001/eureka/
+    # 是否注册自身到eureka服务器
+    register-with-eureka: true
+    fetch-registry: true
+
+
+
