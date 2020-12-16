@@ -7,7 +7,8 @@ spring:
     allow-bean-definition-overriding: true
   application:
     name: IDEAL-ROCKETMQ
-
+  profiles:
+    active: dev
 
 eureka:
   instance:
@@ -19,10 +20,5 @@ eureka:
     # 是否注册自身到eureka服务器
     register-with-eureka: true
     fetch-registry: true
-
-rocketmq:
-  name-server: 127.0.0.1:9876
-  producer:
-    group: my-producer-group
 
 
