@@ -81,7 +81,7 @@ public class RocketMQConfiguration {
      * @return
      * @throws MQClientException
      */
-    @Bean
+//    @Bean
     public DefaultMQPushConsumer pushConsumer() throws MQClientException {
         DefaultMQPushConsumer consumer = new DefaultMQPushConsumer(
                 rocketMQProperties.getConsumerGroupName());
@@ -122,10 +122,8 @@ public class RocketMQConfiguration {
                     return ConsumeOrderlyStatus.SUCCESS;
                 }
             });
-        }
-        // 并发消费
-        else {
-
+        }  else {
+            // 并发消费
             consumer.registerMessageListener(new MessageListenerConcurrently() {
 
                 @Override
