@@ -31,8 +31,8 @@ public class ProducerController {
     @GetMapping("/sendMessage")
     public void sendMsg() {
         log.info("进入发送普通消息方法，发送100个用户==={}",defaultProducer.toString());
+        User user = new User();
         for(int i=0;i<100;i++){
-            User user = new User();
             user.setId(String.valueOf(i));
             user.setUsername("yangshilei"+i);
             String json = JSON.toJSONString(user);
@@ -54,8 +54,8 @@ public class ProducerController {
     @GetMapping("/sendMessOrder")
     public void sendMsgOrder() {
         log.info("进入支持顺序发送消息发送消息方法");
+        User user = new User();
         for(int i=0;i<100;i++) {
-            User user = new User();
             user.setId(String.valueOf(i));
             user.setUsername("jhp" + i);
             String json = JSON.toJSONString(user);
