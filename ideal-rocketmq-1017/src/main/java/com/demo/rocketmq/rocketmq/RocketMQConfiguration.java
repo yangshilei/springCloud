@@ -77,7 +77,7 @@ public class RocketMQConfiguration {
     }
 
     /**
-     * 创建消息消费的实例
+     * 创建消息消费的实例，自动推送的时候将bean注解放开即可
      * @return
      * @throws MQClientException
      */

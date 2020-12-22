@@ -21,7 +21,7 @@ import java.util.Set;
 public class ConsumerService {
 
 
-
+// 需要将RocketMQConfiguration模块中关于消费者的bean注解。
 //    @EventListener(condition = "#event.msgs[0].topic=='user-topic' && #event.msgs[0].tags=='white'")
     public void rocketmqMsgListener(MessageEvent event) {
         try {

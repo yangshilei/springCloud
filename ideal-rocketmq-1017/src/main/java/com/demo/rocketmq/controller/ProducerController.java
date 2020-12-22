@@ -20,9 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 import java.util.Set;
 
-/**
- * 监听消息进行消费
- */
+
 @Slf4j
 @RestController
 @Api
@@ -54,8 +52,6 @@ public class ProducerController {
                 e.printStackTrace();
             }
         }
-
-
     }
 
     /**
@@ -89,7 +85,7 @@ public class ProducerController {
     /**
      * 测试消费者拉取消息
      */
-    @ApiOperation(value = "支持顺序发送消息", notes = "支持顺序发送消息")
+    @ApiOperation(value = "测试消费者拉取消息", notes = "测试消费者拉取消息")
     @GetMapping("/test/getmessage")
     public void testConsumer()  throws Exception {
         DefaultMQPullConsumer consumer = new DefaultMQPullConsumer("user_consumer_group");
