@@ -17,6 +17,7 @@ public class TestController {
     @ApiOperation(value = "测试接口",notes = "测试接口")
     @PostMapping("/test")
     Result test(){
+        log.info("请求正常");
         return Result.ok("success");
     }
 
