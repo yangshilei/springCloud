@@ -9,8 +9,6 @@ import java.util.zip.GZIPInputStream;
 
 /**
  * 文件工具类
- * @author xiaobei
- * update meilon
  */
 @Slf4j
 public class FileUtil {
