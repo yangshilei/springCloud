@@ -33,10 +33,11 @@ public class TestController {
      * 代码生成数据，写入文件并上传到sftp服务器；
      */
     private void uploadFile(){
-        String ip = "47.94.111.71";
-        String port = "22";
-        String userName = "mysftp";
-        String passWord = "ysl13222031857";
+        // 因为该模块代码对外公开，所以此处使用代码的符合表示实际的连接信息。
+        String ip = "ip";
+        String port = "port";
+        String userName = "username";
+        String passWord = "passWord";
         SftpClient sftp = new SftpClient(null, ip, Integer.parseInt(port), userName, passWord);
 
         log.info("sftp客户端创建成功");
