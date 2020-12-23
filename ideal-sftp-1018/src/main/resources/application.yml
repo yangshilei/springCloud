@@ -1,0 +1,14 @@
+server:
+  port: 1018
+
+spring:
+  application:
+    name: IDEAL-SFTP
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1001/eureka/
+    # 是否注册自身到eureka服务器:true-注册  false:不注册
+    register-with-eureka: false
+    fetch-registry: false
