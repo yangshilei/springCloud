@@ -10,6 +10,7 @@ spring:
   profiles:
     active: dev
 
+
 eureka:
   instance:
     prefer-ip-address: true # 注册服务的时候使用服务的ip地址
