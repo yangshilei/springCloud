@@ -15,6 +15,7 @@
         <module>ideal-mycat-1016</module>
         <module>ideal-rocketmq-1017</module>
         <module>ideal-sftp-1018</module>
+        <module>ideal-elasticsearch-1019</module>
     </modules>
 
     <groupId>com.example</groupId>
