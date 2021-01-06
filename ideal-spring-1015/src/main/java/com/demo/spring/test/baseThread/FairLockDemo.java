@@ -3,7 +3,7 @@ package com.demo.spring.test.baseThread;
 import java.util.concurrent.locks.ReentrantLock;
 
 /** 
- * @Description: 重入锁：公平和非公平锁 
+ * @Description: 重入锁：公平和非公平锁
  * @Author: yangshilei
  */
 public class FairLockDemo implements Runnable{
