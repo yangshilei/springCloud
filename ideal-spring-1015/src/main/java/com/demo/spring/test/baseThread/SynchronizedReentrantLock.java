@@ -30,7 +30,7 @@ public class SynchronizedReentrantLock implements Runnable{
     // 也是使用this锁
     private synchronized void methodB(){
         num++;
-        System.out.println("我是方法B，模拟发送邮件");
+        System.out.println("我是方法B，获取到A方法的所，可以进行模拟发送邮件");
     }
 
     public static void main(String[] args) {

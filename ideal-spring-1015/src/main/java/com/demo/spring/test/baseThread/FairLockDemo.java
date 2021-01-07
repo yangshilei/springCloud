@@ -8,12 +8,14 @@ import java.util.concurrent.locks.ReentrantLock;
  */
 public class FairLockDemo implements Runnable{
 
-    public static ReentrantLock lock = new ReentrantLock();
+    // 公平锁，按照顺序去执行
+    public static ReentrantLock lock = new ReentrantLock(true);
 
     @Override
     public void run() {
         while (true){
             try {
+                lock.lock();
                 lock.lock();
                 Thread.sleep(1000);
                 System.out.println("线程名称："+Thread.currentThread().getName());
@@ -21,6 +23,7 @@ public class FairLockDemo implements Runnable{
                 System.out.println("异常");
             }
             finally {
+                lock.unlock();
                 lock.unlock();
             }
         }
