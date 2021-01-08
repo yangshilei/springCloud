@@ -1,8 +1,20 @@
 server:
   port: 1002
+
 spring:
   application:
     name: IDEAL-GATEWAY
+  main:
+    allow-bean-definition-overriding: true
+  cloud:
+    gateway:
+      routes:
+      # --------------------- SPRINGLEARN 模块路由--------------------- #
+      - uri: lb://IDEAL-SPRINGLEARN
+        predicates:
+          - Path=/ysl/gateway/test/**
+        filters:
+          - StripPrefix=3
 
 eureka:
   client:

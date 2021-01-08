@@ -6,4 +6,12 @@ spring:
     name: IDEAL-SPRINGLEARN
 
 
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1001/eureka/
+    # 是否注册自身到eureka服务器:true-注册  false:不注册
+    register-with-eureka: true
+    fetch-registry: true
+
 # 本模块不注册到eureka上，注册到本地nacos上
