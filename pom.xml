@@ -16,6 +16,7 @@
         <module>ideal-rocketmq-1017</module>
         <module>ideal-sftp-1018</module>
         <module>ideal-elasticsearch-1019</module>
+        <module>ideal-mongodb-1020</module>
     </modules>
 
     <groupId>com.example</groupId>
