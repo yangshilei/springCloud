@@ -5,7 +5,6 @@
     <packaging>pom</packaging>
     <modules>
         <module>ideal-euraka-1001</module>
-        <module>ideal-gateway-1002</module>
         <module>ideal-rabbitmq-1010</module>
         <module>ideal-syn-1011</module>
         <module>ideal-shiro-1012</module>
@@ -17,6 +16,7 @@
         <module>ideal-sftp-1018</module>
         <module>ideal-elasticsearch-1019</module>
         <module>ideal-mongodb-1020</module>
+        <module>ideal-gatewaymy-1002</module>
     </modules>
 
     <groupId>com.example</groupId>
