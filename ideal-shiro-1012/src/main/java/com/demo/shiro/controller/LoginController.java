@@ -27,8 +27,8 @@ public class LoginController {
         UsernamePasswordToken usernamePasswordToken = new UsernamePasswordToken(user.getUserName(),user.getPassword());
         try {
             subject.login(usernamePasswordToken);
-            //            subject.checkRole("admin");
-//            subject.checkPermissions("query", "add");
+            subject.checkRole("admin");
+            subject.checkPermissions("query", "add");
         }catch (AuthenticationException e){
             e.printStackTrace();;
             return "账号或密码错误";
