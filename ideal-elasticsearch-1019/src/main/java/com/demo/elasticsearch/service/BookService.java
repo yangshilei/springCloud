@@ -1,5 +1,6 @@
 package com.demo.elasticsearch.service;
 
+import com.demo.elasticsearch.dto.Result;
 import com.demo.elasticsearch.elasticsearch.Book;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -19,6 +20,9 @@ public interface BookService {
 
     List<Book> findAll();
 
+    // 精确查询
     Page<Book> findByAuthor(String author, PageRequest pageRequest);
 
+    // 根据书的主题中某个字段查询
+    Result findByTitle(String author);
 }
