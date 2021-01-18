@@ -20,7 +20,7 @@ public interface BookService {
 
     List<Book> findAll();
 
-    // 精确查询
+    // 根据作者字段查询
     Page<Book> findByAuthor(String author, PageRequest pageRequest);
 
     // 根据书的主题中某个字段查询

@@ -66,7 +66,7 @@ public class ElasticSearchController {
     @ApiOperation(value = "根据作者名字段查询",notes = "根据作者名字段查询")
     @PostMapping("/author")
     public Result getBookByAuthor(@RequestBody Book request) {
-        log.info("根据作者精确查询入参=={}",request.toString());
+        log.info("根据作者查询入参=={}",request.toString());
         PageRequest pageRequest = new PageRequest(0,2);
         Page<Book> byAuthor = bookService.findByAuthor(request.getAuthor(), pageRequest);
         List<Book> content = byAuthor.getContent();

@@ -52,7 +52,7 @@ public class BookServiceImpl implements BookService {
     }
 
     /**
-     *  根据作者精确查询
+     *  根据作者查询
      * @param author
      * @param pageRequest
      * @return
@@ -63,7 +63,7 @@ public class BookServiceImpl implements BookService {
     }
 
     /**
-     *  根据书的主题模糊查询
+     *  根据书的主题查询
      * @param title
      * @return
      */
