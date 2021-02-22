@@ -1,5 +1,6 @@
 package com.demo.spring.controller;
 
+import com.demo.spring.design.strategy_model.UserService;
 import com.demo.spring.design.strategy_model.UserTypeFactory;
 import com.demo.spring.dto.Result;
 import io.swagger.annotations.Api;
@@ -22,7 +23,11 @@ public class UserController {
     @ApiOperation(value = "策略模式执行查询用户名",notes = "策略模式执行查询用户名")
     @GetMapping("/test")
     Result getUserName(Integer type,String username){
-        String userName = factory.getUserService(type).getUserName(username);
+        UserService userService = factory.getUserService(type);
+        String userName = "";
+        if(null != userService){
+            userName = userService.getUserName(username);
+        }
         return Result.ok(userName);
     }
 
